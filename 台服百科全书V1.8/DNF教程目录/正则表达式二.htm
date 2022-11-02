@@ -1,0 +1,239 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>正则表达式二（分组替换）</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+
+
+
+<style>
+html,div { margin: 0; padding: 0;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
+}
+
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
+}
+
+#winchm_template_top{
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #585858;
+}
+
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
+}
+
+#winchm_template_content{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #B1CEFE;
+	border-top-style: solid;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
+	text-align: left;
+}
+
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+@media print
+{
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
+#winchm_template_button{
+visibility:hidden;
+}
+}
+
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
+</style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+
+
+
+
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="正则表达式一.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../template2/btn_prev_n.gif" border="0"></a><A href="相关下载链接.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation"><a href="index.html">Help</a> &gt; 
+</div>
+	<div id="winchm_template_title">正则表达式二（分组替换）</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content">
+<P><FONT color=#444444><FONT face=黑体><FONT size=3>——by：<A 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(239,239,239); TEXT-INDENT: 0px; FONT: 700 12px/18px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; TEXT-DECORATION: none; -webkit-text-stroke-width: 0px" 
+class=xw1 href="http://www.pvfba.com/home.php?mod=space&amp;uid=251" 
+target=_blank>lblb699</A>&nbsp;原帖地址：<A 
+href="http://www.pvfba.com/forum.php?mod=viewthread&amp;tid=360&amp;extra=page%3D1">http://www.pvfba.com/forum.php?mod=viewthread&amp;tid=360&amp;extra=page%3D1</A></FONT></FONT></FONT></P>
+<P><FONT color=#444444><FONT face=黑体><FONT size=3></FONT></FONT></FONT>&nbsp;</P>
+<P><FONT color=#444444><FONT face=黑体><FONT size=3></FONT></FONT></FONT>&nbsp;</P>
+<P><FONT color=#444444><FONT face=黑体><FONT size=3>上回说到正则区块搜索，批量替换的方法，这回我再给大家说说正则分组替换的方法，正则是很强大的工具，我懂的也只是皮毛，而且写一次还得查大量资料， 
+话说这次也是压杆的议题，接下来进入正题：<BR style="WORD-WRAP: break-word"><FONT style="WORD-WRAP: break-word">有这么一段代码：&nbsp;&nbsp;</FONT></FONT><BR 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(68,68,68); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"></FONT></FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#ff0000>27044</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#ff00>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#000000>2&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;5&nbsp; &nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;6&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;10102&nbsp; 
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;0&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;0&nbsp; 
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;0&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;0&nbsp; 
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;0&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;0&nbsp; 
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;1&nbsp; &nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;7486</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#ff00>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#0000ff>`百中選一的青銅劍`</FONT><BR 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(68,68,68); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT style="LINE-HEIGHT: 21px; WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); FONT-VARIANT: normal; FONT-STYLE: normal; TEXT-INDENT: 0px; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(68,68,68); FONT-SIZE: 14px; FONT-WEIGHT: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" face=黑体><FONT style="WORD-WRAP: break-word" size=3>要替换成：</FONT></FONT><BR 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(68,68,68); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#ff0000>27044</FONT><SPAN 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; DISPLAY: inline !important; FONT: 14px/21px 微软雅黑; WHITE-SPACE: normal; FLOAT: none; LETTER-SPACING: normal; COLOR: rgb(68,68,68); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">&nbsp; 
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;2&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;5&nbsp; 
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;6&nbsp; &nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;10102&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;0&nbsp; 
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;0&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;0&nbsp; 
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;0&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;0&nbsp; 
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;0&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;1&nbsp; 
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;7486&nbsp; &nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;</SPAN><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#0000ff>&lt;3::name_27044``&gt;</FONT><BR 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(68,68,68); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><BR 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(68,68,68); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT style="LINE-HEIGHT: 21px; WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); FONT-VARIANT: normal; FONT-STYLE: normal; TEXT-INDENT: 0px; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(68,68,68); FONT-SIZE: 14px; FONT-WEIGHT: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" face=宋体>如果文件中只有这么一行的话， 当然手动去更改也可以，但如果出现几千行类似的代码，手动去改的话……</FONT><BR 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(68,68,68); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; DISPLAY: inline !important; FONT: 14px/21px 微软雅黑; WHITE-SPACE: normal; FLOAT: none; LETTER-SPACING: normal; COLOR: rgb(68,68,68); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">我们现在来分析一下：</SPAN><BR 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(68,68,68); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; DISPLAY: inline !important; FONT: 14px/21px 微软雅黑; WHITE-SPACE: normal; FLOAT: none; LETTER-SPACING: normal; COLOR: rgb(68,68,68); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">我们要改动的地方是将</SPAN><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#ff00>`百中選一的青銅劍`</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#000000>变为</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#0000ff>&lt;3::name_27044``&gt;，</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#000000>而</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#0000ff>&lt;3::name_</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#ff0000>XXX</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#0000ff>``&gt;</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#000000>中的</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#ff0000>XXX</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#000000>是每行首个</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#ff0000>制表符</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#000000>之前的数字，中间的一段代码不变，要实现这种替换，就需要用到分组的方式，我们来把代码分为三段：</FONT><BR 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(68,68,68); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); FONT-VARIANT: normal; FONT-STYLE: normal; TEXT-INDENT: 0px; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(68,68,68); FONT-WEIGHT: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" size=1><FONT style="WORD-WRAP: break-word" color=#ff0000>（27044）&nbsp; 
+&nbsp;<SPAN class=Apple-converted-space>&nbsp;</SPAN></FONT>（<FONT style="WORD-WRAP: break-word" color=#000000>2&nbsp; &nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;5&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;6&nbsp; &nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;10102&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;0&nbsp; 
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;0&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;0&nbsp; 
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;0&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;0&nbsp; 
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;0&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;1&nbsp; 
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;7486）</FONT><FONT style="WORD-WRAP: break-word; COLOR: rgb(255,0,0)">&nbsp; &nbsp;<SPAN 
+class=Apple-converted-space>&nbsp;</SPAN></FONT><FONT style="WORD-WRAP: break-word" color=#0000ff>（`百中選一的青銅劍`）</FONT></FONT><BR 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(68,68,68); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#000000>接下来用正则将三段代码分隔并转义：</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#ff0000>(\w+)</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#00ff00>\t</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#000000>(\w+.*)</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#0000ff>`(\w+.*)`</FONT><BR 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(68,68,68); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#000000>颜色代表相应的分组，其中</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#00ff00>\t</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#000000>代表第一个制表符。</FONT><BR 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(68,68,68); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#000000>接下来我们写替换的正则表达式：</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#ff0000>(\1)</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#00ff00>\t</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#000000>(\2)</FONT><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#0000ff>(&lt;3::name\_\1``&gt;)</FONT><BR 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(68,68,68); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#000000>每一段分组都用括号区别，\w+可以理解为一段变量，无字数限制，在搜索部分出现几次，那么替换部分就可以用\1,\2,\3……代表相应的分组。</FONT><BR 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(68,68,68); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><FONT style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/21px 微软雅黑; WORD-WRAP: break-word; WHITE-SPACE: normal; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" color=#000000>再之后就没有之后了，希望这些能够帮到大家。</FONT></P></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2014. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
+</body>
+</html>

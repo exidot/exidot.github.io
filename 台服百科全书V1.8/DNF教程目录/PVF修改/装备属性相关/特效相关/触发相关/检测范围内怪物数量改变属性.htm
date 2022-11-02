@@ -1,0 +1,232 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>检测范围内怪物数量改变属性</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+
+
+
+<style>
+html,div { margin: 0; padding: 0;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
+}
+
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
+}
+
+#winchm_template_top{
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #585858;
+}
+
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
+}
+
+#winchm_template_content{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #B1CEFE;
+	border-top-style: solid;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
+	text-align: left;
+}
+
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+@media print
+{
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
+#winchm_template_button{
+visibility:hidden;
+}
+}
+
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
+</style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+
+
+
+
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="检测角色职业攻击时触发（适用于防具装备）.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../../../../template2/btn_prev_n.gif" border="0"></a><A href="对指定地图指定怪物攻击时触发.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../../../../template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation"><a href="index.html">Help</a> &gt; 
+<A href="../../../PVF修改.htm">PVF修改</A> &gt; <A href="../../../装备修改合集.htm">装备修改合集</A> &gt; <A href="../../装备属性相关.htm">装备属性相关</A> &gt; <A href="../特效相关.htm">特效相关</A> &gt; <A href="../触发相关.htm">触发条件</A> &gt; </div>
+	<div id="winchm_template_title">检测范围内怪物数量改变属性</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content">
+<P>  【非典型触发】</P>
+<P>装备時200px 範圍內出血狀態的敵人每1隻 力量、智力增加10，攻擊速度增加1%%，移動速度增加1%%（最多重疊15次）</P>
+<UL>
+  <LI>[variable stat]<BR>`physical attack`&nbsp;`+`&nbsp;10&nbsp;<BR>`object 
+  number`&nbsp;`enemy`&nbsp;200&nbsp;`bleeding`&nbsp;15&nbsp; 
+  <LI>`magical attack`&nbsp;`+`&nbsp;10&nbsp;<BR>`object 
+  number`&nbsp;`enemy`&nbsp;200&nbsp;`bleeding`&nbsp;15&nbsp; 
+  <LI>`attack speed`&nbsp;`+`&nbsp;10<BR>`object 
+  number`&nbsp;`enemy`&nbsp;200&nbsp;`bleeding`&nbsp;15<BR>`move 
+  speed`&nbsp;`+`&nbsp;10<BR>`object 
+  number`&nbsp;`enemy`&nbsp;200&nbsp;`bleeding`&nbsp;15&nbsp;<BR>[/variable 
+  stat]</LI></UL>
+  <P> 
+  注释说明：</P>
+<UL style="MARGIN-RIGHT: 0px" dir=ltr>
+  <LI>
+  <DIV> 
+  变量属性</DIV>
+  <UL>
+    <LI>
+  <DIV> 
+  参数1：属性</DIV>
+    <LI>
+  <DIV> 
+  参数2：运算符</DIV>
+    <LI>
+  <DIV> 
+  参数3：变量'对象数目'</DIV>
+    <LI>
+  <DIV> 
+  参数4：被检测对象</DIV>
+    <LI>
+  <DIV> 
+  参数5：对象范围</DIV>
+    <LI>
+  <DIV> 
+  参数6：异常状态</DIV>
+    <LI>
+  <DIV> 
+  参数7：最大重叠数</DIV></LI></UL></LI></UL></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2014. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
+</body>
+</html>

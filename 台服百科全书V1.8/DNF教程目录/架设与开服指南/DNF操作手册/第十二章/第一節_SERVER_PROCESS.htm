@@ -1,0 +1,1627 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>第一節 SERVER PROCESS</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+
+
+
+<style>
+html,div { margin: 0; padding: 0;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
+}
+
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
+}
+
+#winchm_template_top{
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #585858;
+}
+
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
+}
+
+#winchm_template_content{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #B1CEFE;
+	border-top-style: solid;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
+	text-align: left;
+}
+
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+@media print
+{
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
+#winchm_template_button{
+visibility:hidden;
+}
+}
+
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
+</style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+
+
+
+
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="../../../../$$unsavedpage22.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../../../template2/btn_prev_n.gif" border="0"></a><A href="第二節_LOG指令說明.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../../../template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation"><a href="index.html">Help</a> &gt; 
+<A href="../DNF操作手册.htm">DNF操作手册</A> &gt; <A href="../../../../$$unsavedpage22.htm">第十二章 DNF服務手動操作方式</A> &gt; </div>
+	<div id="winchm_template_title">第一節 SERVER PROCESS</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content">
+<H2 
+style="BORDER-BOTTOM: windowtext 0.5pt solid; TEXT-ALIGN: center; PADDING-BOTTOM: 1pt; LINE-HEIGHT: 16px; WIDOWS: 1; TEXT-TRANSFORM: none; FONT-VARIANT: normal; FONT-STYLE: normal; MARGIN-TOP: 20pt; TEXT-INDENT: -28.35pt; PADDING-LEFT: 0pt; LETTER-SPACING: normal; PADDING-RIGHT: 0pt; FONT-FAMILY: 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); MARGIN-LEFT: 49.6pt; FONT-SIZE: 12pt; WORD-SPACING: 0px; PADDING-TOP: 0pt; -webkit-text-stroke-width: 0px"><SPAN 
+style="TEXT-TRANSFORM: uppercase; LETTER-SPACING: 0.75pt; FONT-FAMILY: 宋体; COLOR: rgb(99,36,35); FONT-SIZE: 12pt">第一節</SPAN><SPAN 
+style="TEXT-TRANSFORM: uppercase; LETTER-SPACING: 0.75pt; FONT-FAMILY: PMingLiU; COLOR: rgb(99,36,35); FONT-SIZE: 12pt">&nbsp;SERVER&nbsp;PROCESS</SPAN><SPAN 
+style="TEXT-TRANSFORM: uppercase; LETTER-SPACING: 0.75pt; FONT-FAMILY: Cambria; COLOR: rgb(99,36,35); FONT-SIZE: 12pt"><?xml:namespace 
+prefix = o /><o:p></o:p></SPAN></H2>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; WIDTH: 515.3pt; LETTER-SPACING: normal; BORDER-COLLAPSE: collapse; FONT-FAMILY: 'Times New Roman'; MARGIN-LEFT: 5.4pt; FONT-SIZE: 10pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormalTable>
+  
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 515.3pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=687 colSpan=4>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Game&nbsp;Process</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 164.55pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=219>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Server&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Process&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">F</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">ile&nbsp;path</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 164.55pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=219>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">GameSvr&nbsp;&amp;&nbsp;StageSvr01</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">df_game_r</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">/home/neople/game/</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 228.45pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=304 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Start&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Stop&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 228.45pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=304 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">./df_game_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">&nbsp;start</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">./df_game_r</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">&nbsp;[CFG&nbsp;Name]&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">stop</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR></TABLE>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; WIDTH: 509.9pt; LETTER-SPACING: normal; BORDER-COLLAPSE: collapse; FONT-FAMILY: 'Times New Roman'; MARGIN-LEFT: 5.4pt; FONT-SIZE: 10pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormalTable>
+  
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 509.9pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=679 colSpan=4>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Channel&nbsp;Process</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 159.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=212>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Server&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Process&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">F</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">ile&nbsp;path</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 159.15pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=212>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">ChannelSvr&nbsp;&amp;&nbsp;StageSvr01</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">channel</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">/home/neople/channel/</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 223.05pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=297 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Start&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Stop&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 223.05pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=297 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">./df_channel_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">&nbsp;start</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">./df_channel_r</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">&nbsp;[CFG&nbsp;Name]&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">stop</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR></TABLE>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; WIDTH: 509.9pt; LETTER-SPACING: normal; BORDER-COLLAPSE: collapse; FONT-FAMILY: 'Times New Roman'; MARGIN-LEFT: 5.4pt; FONT-SIZE: 10pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormalTable>
+  
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 509.9pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=679 colSpan=4>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Relay&nbsp;Process</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 159.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=212>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Server&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Process&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">F</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">ile&nbsp;path</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 159.15pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=212>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">RelaySvr&nbsp;&amp;&nbsp;StageSvr01</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">relay</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">/home/neople/relay/</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 223.05pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=297 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Start&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Stop&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 223.05pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=297 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">./df_relay_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">&nbsp;start</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">./df_relay_r</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">&nbsp;[CFG&nbsp;Name]&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">stop</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR></TABLE>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; WIDTH: 509.9pt; LETTER-SPACING: normal; BORDER-COLLAPSE: collapse; FONT-FAMILY: 'Times New Roman'; MARGIN-LEFT: 5.4pt; FONT-SIZE: 10pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormalTable>
+  
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 509.9pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=679 colSpan=4>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Stun&nbsp;Process</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 159.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=212>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Server&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Process&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">F</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">ile&nbsp;path</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 159.15pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=212>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">StunSvr&nbsp;&amp;&nbsp;StageSvr01</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">stun</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">/home/neople/stun/</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 223.05pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=297 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Start&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Stop&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 223.05pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=297 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">./df_stun_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">&nbsp;start</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">./df_stun_r</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">&nbsp;[CFG&nbsp;Name]&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">stop</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR></TABLE>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; WIDTH: 520.7pt; LETTER-SPACING: normal; BORDER-COLLAPSE: collapse; FONT-FAMILY: 'Times New Roman'; MARGIN-LEFT: 5.4pt; FONT-SIZE: 10pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormalTable>
+  
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 520.7pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=694 colSpan=4>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">DBMW_Guild&nbsp;Process</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 169.95pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=226>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Server&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Process&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">F</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">ile&nbsp;path</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(255,255,255) 31.875pt; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 169.95pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=226>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">AppSvr&nbsp;&amp;&nbsp;StageSvr02</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: rgb(255,255,255) 31.875pt; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">df_dbmw_r</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: rgb(255,255,255) 31.875pt; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">/home/neople/dbmw_guild/</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 233.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=311 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Start&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Stop&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 233.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=311 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_dbmw_r</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt; FONT-WEIGHT: bold">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt; FONT-WEIGHT: bold">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">start</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_dbmw_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">stop</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR></TABLE>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; WIDTH: 520.7pt; LETTER-SPACING: normal; BORDER-COLLAPSE: collapse; FONT-FAMILY: 'Times New Roman'; MARGIN-LEFT: 5.4pt; FONT-SIZE: 10pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormalTable>
+  
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 520.7pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=694 colSpan=4>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">DBMW_mnt&nbsp;Process</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 169.95pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=226>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Server&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Process&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">F</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">ile&nbsp;path</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(255,255,255) 31.875pt; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 169.95pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=226>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">AppSvr&nbsp;&amp;&nbsp;StageSvr02</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: rgb(255,255,255) 31.875pt; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">df_dbmw_r</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: rgb(255,255,255) 31.875pt; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">/home/neople/dbmw_&nbsp;mnt</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">/</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 233.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=311 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Start&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Stop&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 233.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=311 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_dbmw_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;start</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_dbmw_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">[</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">CFG&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">stop</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR></TABLE>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; WIDTH: 520.7pt; LETTER-SPACING: normal; BORDER-COLLAPSE: collapse; FONT-FAMILY: 'Times New Roman'; MARGIN-LEFT: 5.4pt; FONT-SIZE: 10pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormalTable>
+  
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 520.7pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=694 colSpan=4>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">DBMW_stat&nbsp;Process</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 169.95pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=226>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Server&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Process&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">F</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">ile&nbsp;path</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(255,255,255) 31.875pt; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 169.95pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=226>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">AppSvr&nbsp;&amp;&nbsp;StageSvr02</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: rgb(255,255,255) 31.875pt; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">df_dbmw_r</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: rgb(255,255,255) 31.875pt; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">/home/neople/dbmw_&nbsp;stat/</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 233.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=311 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Start&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Stop&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 233.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=311 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_dbmw_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;start</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_dbmw_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">stop</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR></TABLE>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; WIDTH: 520.7pt; LETTER-SPACING: normal; BORDER-COLLAPSE: collapse; FONT-FAMILY: 'Times New Roman'; MARGIN-LEFT: 5.4pt; FONT-SIZE: 10pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormalTable>
+  
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 520.7pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=694 colSpan=4>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">guild&nbsp;Process</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 169.95pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=226>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Server&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Process&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">F</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">ile&nbsp;path</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(255,255,255) 31.875pt; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 169.95pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=226>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">AppSvr&nbsp;&amp;&nbsp;StageSvr02</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: rgb(255,255,255) 31.875pt; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">guild</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: rgb(255,255,255) 31.875pt; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">/home/neople/guild/</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 233.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=311 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Start&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Stop&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 233.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=311 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">guild</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;start</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">guild</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">stop</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR></TABLE>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; WIDTH: 520.7pt; LETTER-SPACING: normal; BORDER-COLLAPSE: collapse; FONT-FAMILY: 'Times New Roman'; MARGIN-LEFT: 5.4pt; FONT-SIZE: 10pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormalTable>
+  
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 520.7pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=694 colSpan=4>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">statics&nbsp;Process</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 169.95pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=226>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Server&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Process&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">F</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">ile&nbsp;path</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(255,255,255) 31.875pt; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 169.95pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=226>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">AppSvr&nbsp;&amp;&nbsp;StageSvr02</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: rgb(255,255,255) 31.875pt; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">statics</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: rgb(255,255,255) 31.875pt; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">/home/neople/statics/</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 233.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=311 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Start&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Stop&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 233.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=311 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">statics</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;start</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">statics</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">stop</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR></TABLE>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; WIDTH: 520.7pt; LETTER-SPACING: normal; BORDER-COLLAPSE: collapse; FONT-FAMILY: 'Times New Roman'; MARGIN-LEFT: 5.4pt; FONT-SIZE: 10pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormalTable>
+  
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 520.7pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=694 colSpan=4>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">monitor&nbsp;Process</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 169.95pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=226>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Server&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Process&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">F</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">ile&nbsp;path</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(255,255,255) 31.875pt; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 169.95pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=226>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">AppSvr&nbsp;&amp;&nbsp;StageSvr02</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: rgb(255,255,255) 31.875pt; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">monitor</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: rgb(255,255,255) 31.875pt; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">/home/neople/monitor/</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 233.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=311 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Start&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Stop&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 233.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=311 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">monitor</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;start</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">monitor</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">stop</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR></TABLE>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; WIDTH: 515.3pt; LETTER-SPACING: normal; BORDER-COLLAPSE: collapse; FONT-FAMILY: 'Times New Roman'; MARGIN-LEFT: 5.4pt; FONT-SIZE: 10pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormalTable>
+  
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 515.3pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=687 colSpan=4>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">auction&nbsp;Process</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 164.55pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=219>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Server&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Process&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">F</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">ile&nbsp;path</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 164.55pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=219>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">AuctionSvr&nbsp;&amp;&nbsp;StageSvr02</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">auction</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">/home/neople/auction/</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 228.45pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=304 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Start&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Stop&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 228.45pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=304 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">auction</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;start</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">auction</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">stop</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR></TABLE>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; WIDTH: 515.3pt; LETTER-SPACING: normal; BORDER-COLLAPSE: collapse; FONT-FAMILY: 'Times New Roman'; MARGIN-LEFT: 5.4pt; FONT-SIZE: 10pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormalTable>
+  
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 515.3pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=687 colSpan=4>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">point&nbsp;Process</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 164.55pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=219>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Server&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Process&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">F</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">ile&nbsp;path</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 164.55pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=219>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">AuctionSvr&nbsp;&amp;&nbsp;StageSvr02</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">d</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">f_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">point</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">/home/neople/point/</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 228.45pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=304 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Start&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Stop&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 228.45pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=304 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">point</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;start</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">point</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">stop</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR></TABLE>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; WIDTH: 515.3pt; LETTER-SPACING: normal; BORDER-COLLAPSE: collapse; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 10pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormalTable>
+  
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 515.3pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=687 colSpan=4>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">bridge&nbsp;Process</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 164.55pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=219>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Server&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Process&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">F</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">ile&nbsp;path</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 164.55pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=219>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">ChannelBridge&nbsp;&amp;&nbsp;StageSvr02</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">d</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">f_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">bridge</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">/home/neople/bridge/</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 228.45pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=304 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Start&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Stop&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 228.45pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=304 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">bridge</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;start</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">bridge</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">stop</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR></TABLE>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; WIDTH: 515.3pt; LETTER-SPACING: normal; BORDER-COLLAPSE: collapse; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 10pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormalTable>
+  
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 515.3pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=687 colSpan=4>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">community&nbsp;Process</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 164.55pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=219>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Server&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Process&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">F</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">ile&nbsp;path</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 164.55pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=219>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">ChannelBridge&nbsp;&amp;&nbsp;StageSvr02</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">d</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">f_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">community</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">/home/neople/community/</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 228.45pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=304 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Start&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Stop&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 228.45pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=304 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">community</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;start</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">community</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">stop</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR></TABLE>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; WIDTH: 515.3pt; LETTER-SPACING: normal; BORDER-COLLAPSE: collapse; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 10pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormalTable>
+  
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 515.3pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=687 colSpan=4>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">coserver&nbsp;Process</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 164.55pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=219>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Server&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Process&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">F</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">ile&nbsp;path</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 164.55pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=219>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">ChannelBridge&nbsp;&amp;&nbsp;StageSvr02</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">d</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">f_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">coserver</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">/home/neople/coserver/</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 228.45pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=304 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Start&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Stop&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 228.45pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=304 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">coserver</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;start</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">coserver</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">stop</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR></TABLE>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; WIDTH: 515.3pt; LETTER-SPACING: normal; BORDER-COLLAPSE: collapse; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 10pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormalTable>
+  
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 515.3pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=687 colSpan=4>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">manager&nbsp;Process</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 164.55pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=219>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Server&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Process&nbsp;Name</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">F</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">ile&nbsp;path</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 164.55pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=219>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">ChannelBridge&nbsp;&amp;&nbsp;StageSvr02</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=233 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">d</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">f_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">manager</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 175.4pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=233>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">/home/neople/manager/</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 228.45pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=304 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Start&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold">Stop&nbsp;Command:</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 11pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 228.45pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: rgb(255,255,255) 31.875pt; PADDING-TOP: 0pt"     vAlign=top width=304 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">manager</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;start</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 286.85pt; PADDING-RIGHT: 0pt; BORDER-TOP: rgb(255,255,255) 31.875pt; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=382 colSpan=2>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">./df_</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">manager</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">_r&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt; FONT-WEIGHT: bold">[CFG&nbsp;Name]</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">stop</SPAN><SPAN 
+      style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD></TR></TABLE><BR 
+class=Apple-interchange-newline></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2014. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1186 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>第一項 遊戲統計劇本 ( 統計DB MASTER )</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+
+
+
+<style>
+html,div { margin: 0; padding: 0;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
+}
+
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
+}
+
+#winchm_template_top{
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #585858;
+}
+
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
+}
+
+#winchm_template_content{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #B1CEFE;
+	border-top-style: solid;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
+	text-align: left;
+}
+
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+@media print
+{
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
+#winchm_template_button{
+visibility:hidden;
+}
+}
+
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
+</style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+
+
+
+
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="../../../../../$$unsavedpage19.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../../../../template2/btn_prev_n.gif" border="0"></a><A href="第二項_營收統計相關_(統計_DB_MASTER).htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../../../../template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation"><a href="index.html">Help</a> &gt; 
+<A href="../../DNF操作手册.htm">DNF操作手册</A> &gt; <A href="../../../../../$$unsavedpage18.htm">第五章第六章 DB 架構及功能介紹</A> &gt; <A href="../../../../../$$unsavedpage19.htm">第二節 STORE PROCEDURE</A> &gt; </div>
+	<div id="winchm_template_title">第一項 遊戲統計劇本 ( 統計DB MASTER )</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content">
+<H3 
+style="BORDER-BOTTOM: windowtext 0.5pt dotted; TEXT-ALIGN: center; PADDING-BOTTOM: 1pt; LINE-HEIGHT: 16px; WIDOWS: 1; TEXT-TRANSFORM: none; FONT-VARIANT: normal; FONT-STYLE: normal; MARGIN-TOP: 15pt; TEXT-INDENT: -28.35pt; PADDING-LEFT: 0pt; LETTER-SPACING: normal; PADDING-RIGHT: 0pt; FONT-FAMILY: 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); MARGIN-LEFT: 70.9pt; FONT-SIZE: 12pt; BORDER-TOP: windowtext 0.5pt dotted; WORD-SPACING: 0px; PADDING-TOP: 1pt; -webkit-text-stroke-width: 0px"><SPAN 
+style="TEXT-TRANSFORM: uppercase; FONT-FAMILY: 宋体; COLOR: rgb(98,36,35); FONT-SIZE: 12pt">第一項</SPAN><SPAN 
+style="TEXT-TRANSFORM: uppercase; FONT-FAMILY: Cambria; COLOR: rgb(98,36,35); FONT-SIZE: 12pt">&nbsp;</SPAN><SPAN 
+style="TEXT-TRANSFORM: uppercase; FONT-FAMILY: PMingLiU; COLOR: rgb(98,36,35); FONT-SIZE: 12pt">遊戲統計劇本&nbsp;(&nbsp;統計DB&nbsp;MASTER&nbsp;)</SPAN><SPAN 
+style="TEXT-TRANSFORM: uppercase; FONT-FAMILY: Cambria; COLOR: rgb(98,36,35); FONT-SIZE: 12pt"><?xml:namespace 
+prefix = o /><o:p></o:p></SPAN></H3>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="LETTER-SPACING: 0.25pt; FONT-FAMILY: MingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 11pt">※</SPAN><SPAN 
+style="LETTER-SPACING: 0.25pt; FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 11pt">參照st_taiwan_server,&nbsp;st_taiwan_game&nbsp;DB中處理對象統計TABLE模式</SPAN></P><SPAN 
+style="LETTER-SPACING: 0.25pt; FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 11pt">
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; WIDTH: 777.8pt; LETTER-SPACING: normal; BORDER-COLLAPSE: collapse; FONT-FAMILY: 'Times New Roman'; MARGIN-LEFT: 0.15pt; FONT-SIZE: 10pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormalTable>
+  
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">執行週期</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">劇本名</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">說明</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">處理對象統計TABLE</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">1</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">分鐘一次</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/max_count_v2.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">1</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">分為單位,&nbsp;各伺服器的最高同事在線</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">max_count_v2</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">5</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">分鐘一次</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/st_script_5min.sh</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">各pvp,&nbsp;channel同時在線</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">max_count_pvp,&nbsp;max_count_channel</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">30</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">分鐘一次</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/log_client_ting_stat_time.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">client&nbsp;ting</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">的資訊</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">client_ting_stat_time</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">每天&nbsp;00點&nbsp;10分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/auction_script.sh</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">拍賣場統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">auction_day,&nbsp;auction_item_top100,&nbsp;auction_reg_top50,&nbsp;auction_item_day</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">每天&nbsp;02點&nbsp;00分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/member_info.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">帳號資訊統計&nbsp;(&nbsp;每天更新&nbsp;)</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">member_info</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">每天&nbsp;02點&nbsp;30分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/member_info_view.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">帳號資訊view&nbsp;table統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">member_info_view</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">每天&nbsp;03點&nbsp;00分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/stat_to_member_info.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">帳號資訊統計&nbsp;(&nbsp;每天更新&nbsp;)</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">member_info</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">每天&nbsp;03點&nbsp;10分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/stat_to_charac_info.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">角色資訊統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">charac_info_all</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">每天&nbsp;03點&nbsp;20分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/log_fatigue.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">疲勞度統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">log_fatigue</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">每天&nbsp;03點&nbsp;30分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/log_charac_create.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">新創角統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">create_charac_view</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">每天&nbsp;03點&nbsp;35分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/log_charac_lev.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">各等級別角色統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">log_charac_lev</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">每天&nbsp;03點&nbsp;45分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/log_fatigue_charac.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">各角色疲勞度統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">log_charac_play</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">每天&nbsp;04點&nbsp;00分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/log_maxmoney.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">各角色持有金幣資訊統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">log_maxmoney</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">每天&nbsp;04點&nbsp;00分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/new_log_money.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">各角色持有金幣資訊統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">log_money,&nbsp;log_item_stat_view</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">每天&nbsp;04點&nbsp;10分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/log_pay_coin.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">各角色別復活幣持有統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">log_pay_coin</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">每天&nbsp;04點&nbsp;15分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/log_coin.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">各角色別持有復活幣資訊</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">log_coin</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">每天&nbsp;04點&nbsp;30分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/log_uv_dwm.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">日,&nbsp;周,&nbsp;月間登入&nbsp;&nbsp;UV&nbsp;統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">login_uv_day,&nbsp;login_uv_week,&nbsp;login_uv_month</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">每天&nbsp;04點&nbsp;40分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/log_uv.sh</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">日間&nbsp;UV統計和&nbsp;log_dailry_report,&nbsp;log_main_stat&nbsp;統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">login,&nbsp;log_uv,&nbsp;log_daily_report,&nbsp;log_main_stat</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">每天&nbsp;04點&nbsp;50分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/log_uv_playtime.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">各角色別遊戲登入集中&nbsp;時間統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">log_uv_period</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">每天&nbsp;05點&nbsp;00分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/log_fatigue_old_confirm.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">各角色疲勞度統計&nbsp;V2</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">log_fatigue_old_confirm</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">每天&nbsp;06點&nbsp;30分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/hack_charac_levup.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">不正當玩家角色升等統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">hack_charac_levup</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">每天&nbsp;07點&nbsp;00分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/new_member_secede_return_view.sh</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">歸還者統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">log_member_secede_return_view</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">每天&nbsp;08點&nbsp;30分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/log_secret_shop_stat.sh</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">商城統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">log_secret_shop</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">每天&nbsp;08點&nbsp;40分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/log_dungeon_entrance.sh</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">地下城入場統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">log_dungeon_entrance</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">每天&nbsp;09點&nbsp;00分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/log_punish_hack.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">不正當玩家統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">dnf_hack_log_temp,&nbsp;dnf_hack_log,&nbsp;dnf_hack_stat,&nbsp;dnf_hack_stat_total,&nbsp;clean_pad_stat,&nbsp;trade_top</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR></TABLE></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><FONT color=#003366 face=PMingLiU></FONT>&nbsp;</P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><BR class=Apple-interchange-newline>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; WIDTH: 777.8pt; LETTER-SPACING: normal; BORDER-COLLAPSE: collapse; FONT-FAMILY: 'Times New Roman'; MARGIN-LEFT: 0.15pt; FONT-SIZE: 10pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormalTable>
+  
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">執行週期</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">劇情名</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">說明</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">處理對象統計tabke</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">每天&nbsp;09點&nbsp;00分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/new_log_uv_v4.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">日間&nbsp;UV&nbsp;統計和&nbsp;log_dailry_report,&nbsp;log_main_stat&nbsp;,log_fatigue&nbsp;統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">log_fatigue_stat,&nbsp;log_uv,&nbsp;log_daily_report,&nbsp;log_main_stat</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">每天&nbsp;09點&nbsp;10分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/new_new_log_uv_ext.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">歸還者現況統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">log_uv&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">每天&nbsp;09點&nbsp;30分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/new_log_fatigue2.sh</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">疲勞度統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">log_fatigue_new</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">每天&nbsp;09點&nbsp;50分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/log_join_present.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">登入現況統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">log_join_present</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">每天&nbsp;10點&nbsp;00分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/user_price_index_avg_price_week_insert.sh</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">玩家物品獲得統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">user_price_index_avg_price_week</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">每天&nbsp;10點&nbsp;00分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/log_main_stat_update.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">ting</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">log_main_stat</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">每天&nbsp;10點&nbsp;00分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/log_item_drop_v1.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">物品掉落統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">log_item_drop_stat</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">每天&nbsp;10點&nbsp;10分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/login_week_ratio_view.sh</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">每周登入現況統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">login_week_ratio_view&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">每天&nbsp;10點&nbsp;30分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/daily_script_v3.sh</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">玩家金幣,&nbsp;復活幣現況統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">money_top100,&nbsp;coin_top100,&nbsp;gini_aggregate,&nbsp;gini_view,&nbsp;log_punish_money,&nbsp;log_pay_coin</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">每天&nbsp;11點&nbsp;00分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/log_blood_enter_count.sh</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">各角色別&nbsp;blood&nbsp;地下城入場現況統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">log_blood_charac_count_new&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 104.5pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=139>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">每天&nbsp;15點&nbsp;00分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 191.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=255>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/root/bin/new_fatigue_battery.php</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 255.15pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=340>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">各疲勞度金幣現況統計</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 226.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=302>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Cambria; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">log_gold_stat_view&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR></TABLE></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; MARGIN-TOP: 5pt; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/13pt 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 7.5pt; BACKGROUND: rgb(255,255,255); COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;&nbsp;</SPAN></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><BR class=Apple-interchange-newline></P></SPAN></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2014. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
+</body>
+</html>

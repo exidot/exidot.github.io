@@ -1,0 +1,736 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>第六節 各程序終止處理方式</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+
+
+
+<style>
+html,div { margin: 0; padding: 0;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
+}
+
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
+}
+
+#winchm_template_top{
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #585858;
+}
+
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
+}
+
+#winchm_template_content{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #B1CEFE;
+	border-top-style: solid;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
+	text-align: left;
+}
+
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+@media print
+{
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
+#winchm_template_button{
+visibility:hidden;
+}
+}
+
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
+</style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+
+
+
+
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="第五節_GAME_PROCESS_CPU使用率超過90.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../../../template2/btn_prev_n.gif" border="0"></a><A href="../../../../$$unsavedpage25.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../../../template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation"><a href="index.html">Help</a> &gt; 
+<A href="../DNF操作手册.htm">DNF操作手册</A> &gt; <A href="../../../../$$unsavedpage24.htm">第十八章 異常狀況處理</A> &gt; </div>
+	<div id="winchm_template_title">第六節 各程序終止處理方式</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content">
+<H2 
+style="BORDER-BOTTOM: windowtext 0.5pt solid; TEXT-ALIGN: center; PADDING-BOTTOM: 1pt; LINE-HEIGHT: 16px; WIDOWS: 1; TEXT-TRANSFORM: none; FONT-VARIANT: normal; FONT-STYLE: normal; MARGIN-TOP: 20pt; TEXT-INDENT: -28.35pt; PADDING-LEFT: 0pt; LETTER-SPACING: normal; PADDING-RIGHT: 0pt; FONT-FAMILY: 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); MARGIN-LEFT: 49.6pt; FONT-SIZE: 12pt; WORD-SPACING: 0px; PADDING-TOP: 0pt; -webkit-text-stroke-width: 0px"><SPAN 
+style="TEXT-TRANSFORM: uppercase; LETTER-SPACING: 0.75pt; FONT-FAMILY: 宋体; COLOR: rgb(99,36,35); FONT-SIZE: 12pt">第六節</SPAN><SPAN 
+style="TEXT-TRANSFORM: uppercase; LETTER-SPACING: 0.75pt; FONT-FAMILY: PMingLiU; COLOR: rgb(99,36,35); FONT-SIZE: 12pt">&nbsp;各程序終止處理方式</SPAN><SPAN 
+style="TEXT-TRANSFORM: uppercase; LETTER-SPACING: 0.75pt; FONT-FAMILY: Cambria; COLOR: rgb(99,36,35); FONT-SIZE: 12pt"><?xml:namespace 
+prefix = o /><o:p></o:p></SPAN></H2>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p>&nbsp;</o:p></SPAN></P>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; WIDTH: 533.8pt; LETTER-SPACING: normal; BORDER-COLLAPSE: collapse; FONT-FAMILY: 'Times New Roman'; MARGIN-LEFT: 0.15pt; FONT-SIZE: 10pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormalTable>
+  
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 23.55pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=31>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">順序</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 71.65pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=95>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">程式名稱</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 122.9pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=163>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">依賴性</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 184.9pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=246>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">啟動終止&nbsp;(例子)</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 130.8pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=174>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">備註</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 23.55pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=31>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">1</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 71.65pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=95>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">df_game_r</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 122.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=163>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">和DB有依賴性</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 184.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=246>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">./df_game_r&nbsp;cain01&nbsp;stop</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 130.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=174>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">-&nbsp;SERVER</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">終止程式</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: 宋体; FONT-SIZE: 11pt">1.</SPAN><SPAN 
+      style="FONT-FAMILY: 宋体; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt"     vAlign=top>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">Configure&nbsp;file&nbsp;loading&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: 宋体; FONT-SIZE: 11pt">2.</SPAN><SPAN 
+      style="FONT-FAMILY: 宋体; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt"     vAlign=top>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">終止時確認argument&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: 宋体; FONT-SIZE: 11pt">3.</SPAN><SPAN 
+      style="FONT-FAMILY: 宋体; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt"     vAlign=top>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">Pid&nbsp;file&nbsp;loading&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">後&nbsp;SIGUSR2&nbsp;Signal&nbsp;傳送</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: 宋体; FONT-SIZE: 11pt">4.</SPAN><SPAN 
+      style="FONT-FAMILY: 宋体; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt"     vAlign=top>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">Accept&nbsp;thread&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">結束</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: 宋体; FONT-SIZE: 11pt">5.</SPAN><SPAN 
+      style="FONT-FAMILY: 宋体; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt"     vAlign=top>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">將連線中的&nbsp;USER&nbsp;強制&nbsp;logout</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: 宋体; FONT-SIZE: 11pt">6.</SPAN><SPAN 
+      style="FONT-FAMILY: 宋体; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt"     vAlign=top>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">Server&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">節制</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: 宋体; FONT-SIZE: 11pt">7.</SPAN><SPAN 
+      style="FONT-FAMILY: 宋体; FONT-SIZE: 11pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 0pt; PADDING-RIGHT: 0pt; PADDING-TOP: 0pt"     vAlign=top>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">MONITOR&nbsp;SERVER</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">透過&nbsp;Heart&nbsp;beat確認SERVER斷線後進行處理</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 23.55pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=31>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">2</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 71.65pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=95>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">df_auction_r</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 122.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=163>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">DB</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 184.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=246>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">./df_auction_r&nbsp;./cfg/auction_cain.cfg&nbsp;stop&nbsp;df_auction_r</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 130.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=174>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">服務中,和開發組討論後重啟程式</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 23.55pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=31>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">3</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 71.65pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=95>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">df_guild_r</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 122.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=163>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">df_dbmw_r</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 184.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=246>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">./df_guild_r&nbsp;gld_cain&nbsp;stop</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 130.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=174>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 23.55pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=31>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">4</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 71.65pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=95>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">df_statics_r</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 122.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=163>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 184.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=246>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">./df_statics_r&nbsp;stat_cain&nbsp;stop</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 130.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=174>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 23.55pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=31>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">5</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 71.65pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=95>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">df_monitor_r</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 122.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=163>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">df_manger_r,df_dbmw_r</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 184.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=246>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">./df_monitor_r&nbsp;mnt_cain&nbsp;stop</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 130.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=174>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">服務中的程式斷線時,重啟SERVER組的全部程式&nbsp;&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 23.55pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=31>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">6</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 71.65pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=95>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">df_dbmw_r</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 122.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=163>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 184.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=246>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">./df_dbmw_r&nbsp;dbmw_stat_cain&nbsp;stop</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 130.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=174>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">無法看到同時在線的現象(和玩家無實際關聯)</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 23.55pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=31>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">7</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 71.65pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=95>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">df_dbmw_r</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 122.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=163>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 184.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=246>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">./df_dbmw_r&nbsp;dbmw_gld_cain&nbsp;stop</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 130.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=174>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 23.55pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=31>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">8</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 71.65pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=95>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">df_dbmw_r</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 122.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=163>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">df_monitor_r,&nbsp;df_guild_r,&nbsp;DB</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 184.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=246>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">./df_dbmw_r&nbsp;dbmw_mnt_cain&nbsp;stop</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 130.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=174>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 23.55pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=31>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">9</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 71.65pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=95>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">df_coserver_r</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 122.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=163>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">無</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 184.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=246>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">./df_coserver_r&nbsp;coserver&nbsp;stop</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 130.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=174>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 23.55pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=31>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">10</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 71.65pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=95>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">df_manger_r</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 122.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=163>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">DB</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 184.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=246>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">./df_manger_r&nbsp;manger&nbsp;stop</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 130.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=174>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">服務中的程式斷線時重啟全部SERVER組的全部程式</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 23.55pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=31>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">11</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 71.65pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=95>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">df_channel_r</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 122.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=163>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">df_bridge_r</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 184.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=246>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">./df_channel_r&nbsp;channel&nbsp;stop</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 130.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=174>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 23.55pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=31>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">12</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 71.65pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=95>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">df_bridge_r</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 122.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=163>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">DB</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 184.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=246>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">./df_bridge_r&nbsp;bridge&nbsp;stop</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 130.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=174>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 23.55pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=31>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">13</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 71.65pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=95>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">df_relay_r</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 122.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=163>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">無</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 184.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=246>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">./df_relay_r&nbsp;relay01&nbsp;stop</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 130.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=174>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 23.55pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=31>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">14</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 71.65pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=95>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">df_stun_r</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 122.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=163>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">無</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 184.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=246>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">./df_stun_r&nbsp;stop</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 130.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=174>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR></TABLE>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p>&nbsp;</o:p></SPAN></P></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2014. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
+</body>
+</html>

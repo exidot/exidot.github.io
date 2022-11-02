@@ -1,0 +1,483 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>第五節 更新服務及開關操作</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+
+
+
+<style>
+html,div { margin: 0; padding: 0;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
+}
+
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
+}
+
+#winchm_template_top{
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #585858;
+}
+
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
+}
+
+#winchm_template_content{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #B1CEFE;
+	border-top-style: solid;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
+	text-align: left;
+}
+
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+@media print
+{
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
+#winchm_template_button{
+visibility:hidden;
+}
+}
+
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
+</style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+
+
+
+
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="第四節_新部署服務.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../../../template2/btn_prev_n.gif" border="0"></a><A href="第六節_注意事項.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../../../template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation"><a href="index.html">Help</a> &gt; 
+<A href="../DNF操作手册.htm">DNF操作手册</A> &gt; <A href="../../../../$$unsavedpage20.htm">第七章 TENPROTECT 騰訊反外掛機制</A> &gt; </div>
+	<div id="winchm_template_title">第五節 更新服務及開關操作</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content">
+<H2 
+style="BORDER-BOTTOM: windowtext 0.5pt solid; TEXT-ALIGN: center; PADDING-BOTTOM: 1pt; LINE-HEIGHT: 16px; WIDOWS: 1; TEXT-TRANSFORM: none; FONT-VARIANT: normal; FONT-STYLE: normal; MARGIN-TOP: 20pt; TEXT-INDENT: -28.35pt; PADDING-LEFT: 0pt; LETTER-SPACING: normal; PADDING-RIGHT: 0pt; FONT-FAMILY: 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); MARGIN-LEFT: 49.6pt; FONT-SIZE: 12pt; WORD-SPACING: 0px; PADDING-TOP: 0pt; -webkit-text-stroke-width: 0px"><SPAN 
+style="TEXT-TRANSFORM: uppercase; LETTER-SPACING: 0.75pt; FONT-FAMILY: 宋体; COLOR: rgb(99,36,35); FONT-SIZE: 12pt">第五節</SPAN><SPAN 
+style="TEXT-TRANSFORM: uppercase; LETTER-SPACING: 0.75pt; FONT-FAMILY: Cambria; COLOR: rgb(99,36,35); FONT-SIZE: 12pt">&nbsp;</SPAN><SPAN 
+style="TEXT-TRANSFORM: uppercase; LETTER-SPACING: 0.75pt; FONT-FAMILY: PMingLiU; COLOR: rgb(99,36,35); FONT-SIZE: 12pt">更新服務及開關操作</SPAN><SPAN 
+style="TEXT-TRANSFORM: uppercase; LETTER-SPACING: 0.75pt; FONT-FAMILY: Cambria; COLOR: rgb(99,36,35); FONT-SIZE: 12pt"><o:p></O:P></SPAN></H2>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">更新步驟：</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="TEXT-ALIGN: justify; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: -24pt; LETTER-SPACING: normal; FONT: medium 'Times New Roman'; WHITE-SPACE: normal; COLOR: rgb(0,0,0); MARGIN-LEFT: 24pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN style="FONT-FAMILY: 宋体; FONT-SIZE: 11pt">（1）</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">停止遊戲伺服器進程；</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="TEXT-ALIGN: justify; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: -24pt; LETTER-SPACING: normal; FONT: medium 'Times New Roman'; WHITE-SPACE: normal; COLOR: rgb(0,0,0); MARGIN-LEFT: 24pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN style="FONT-FAMILY: 宋体; FONT-SIZE: 11pt">（2）</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">停止</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">SecAgent</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">服務元件</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="BORDER-BOTTOM: windowtext 0.5pt solid; BORDER-LEFT: windowtext 0.5pt solid; PADDING-BOTTOM: 0pt; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; PADDING-LEFT: 0pt; LETTER-SPACING: normal; PADDING-RIGHT: 0pt; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); BORDER-TOP: windowtext 0.5pt solid; BORDER-RIGHT: windowtext 0.5pt solid; WORD-SPACING: 0px; PADDING-TOP: 0pt; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">#&nbsp;</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">若</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">secsvr</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">放在目前的目錄下</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="BORDER-BOTTOM: windowtext 0.5pt solid; BORDER-LEFT: windowtext 0.5pt solid; PADDING-BOTTOM: 0pt; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; PADDING-LEFT: 0pt; LETTER-SPACING: normal; PADDING-RIGHT: 0pt; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); BORDER-TOP: windowtext 0.5pt solid; BORDER-RIGHT: windowtext 0.5pt solid; WORD-SPACING: 0px; PADDING-TOP: 0pt; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">$&nbsp;cd&nbsp;/</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">home</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">/</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">neople</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">/secsvr/bin</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"> </SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">##&nbsp;</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">啟停腳本所在目錄</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="BORDER-BOTTOM: windowtext 0.5pt solid; BORDER-LEFT: windowtext 0.5pt solid; PADDING-BOTTOM: 0pt; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; PADDING-LEFT: 0pt; LETTER-SPACING: normal; PADDING-RIGHT: 0pt; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); BORDER-TOP: windowtext 0.5pt solid; BORDER-RIGHT: windowtext 0.5pt solid; WORD-SPACING: 0px; PADDING-TOP: 0pt; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">$&nbsp;sh&nbsp;stop_secagent.sh</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"> </SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"></SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"></SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">##&nbsp;</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">停止</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">secagent</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">服務</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="TEXT-ALIGN: justify; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: -24pt; LETTER-SPACING: normal; FONT: medium 'Times New Roman'; WHITE-SPACE: normal; COLOR: rgb(0,0,0); MARGIN-LEFT: 24pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN style="FONT-FAMILY: 宋体; FONT-SIZE: 11pt">（3）</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">運行清理腳本</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="BORDER-BOTTOM: windowtext 0.5pt solid; BORDER-LEFT: windowtext 0.5pt solid; PADDING-BOTTOM: 0pt; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; PADDING-LEFT: 0pt; LETTER-SPACING: normal; PADDING-RIGHT: 0pt; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); BORDER-TOP: windowtext 0.5pt solid; BORDER-RIGHT: windowtext 0.5pt solid; WORD-SPACING: 0px; PADDING-TOP: 0pt; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">#&nbsp;</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">若</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">secsvr</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">放在目前的目錄下</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="BORDER-BOTTOM: windowtext 0.5pt solid; BORDER-LEFT: windowtext 0.5pt solid; PADDING-BOTTOM: 0pt; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; PADDING-LEFT: 0pt; LETTER-SPACING: normal; PADDING-RIGHT: 0pt; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); BORDER-TOP: windowtext 0.5pt solid; BORDER-RIGHT: windowtext 0.5pt solid; WORD-SPACING: 0px; PADDING-TOP: 0pt; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">$&nbsp;cd&nbsp;/</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">home</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">/</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">neople</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">/secsvr/bin</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"> </SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">##&nbsp;</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">啟動腳本所在目錄</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="BORDER-BOTTOM: windowtext 0.5pt solid; BORDER-LEFT: windowtext 0.5pt solid; PADDING-BOTTOM: 0pt; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; PADDING-LEFT: 0pt; LETTER-SPACING: normal; PADDING-RIGHT: 0pt; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); BORDER-TOP: windowtext 0.5pt solid; BORDER-RIGHT: windowtext 0.5pt solid; WORD-SPACING: 0px; PADDING-TOP: 0pt; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">$&nbsp;sh&nbsp;clean_g3_mmap.sh</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"> </SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"></SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"></SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">##&nbsp;</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">運行清理腳本</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="TEXT-ALIGN: justify; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: -24pt; LETTER-SPACING: normal; FONT: medium 'Times New Roman'; WHITE-SPACE: normal; COLOR: rgb(0,0,0); MARGIN-LEFT: 24pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN style="FONT-FAMILY: 宋体; FONT-SIZE: 11pt">（4）</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">更新</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">SO</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">和二進位</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 21pt; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">由於安裝包在不指定輸出目錄的情況下，預設解壓到目前的目錄，所以僅需將安裝包複製到工作主目錄</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">(</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">如</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">/data/home/user00/game/)</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">，然後目前的目錄下解壓即可覆蓋更新</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">SDK&nbsp;SO</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">和</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">secagent</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">二進位檔案：</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="BORDER-BOTTOM: windowtext 0.5pt solid; BORDER-LEFT: windowtext 0.5pt solid; PADDING-BOTTOM: 0pt; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; PADDING-LEFT: 0pt; LETTER-SPACING: normal; PADDING-RIGHT: 0pt; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); BORDER-TOP: windowtext 0.5pt solid; BORDER-RIGHT: windowtext 0.5pt solid; WORD-SPACING: 0px; PADDING-TOP: 0pt; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">$&nbsp;cp&nbsp;INSTALL_PKG.tgz&nbsp;/</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">home</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">/</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">neople</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">/secsvr/bin</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="BORDER-BOTTOM: windowtext 0.5pt solid; BORDER-LEFT: windowtext 0.5pt solid; PADDING-BOTTOM: 0pt; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; PADDING-LEFT: 0pt; LETTER-SPACING: normal; PADDING-RIGHT: 0pt; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); BORDER-TOP: windowtext 0.5pt solid; BORDER-RIGHT: windowtext 0.5pt solid; WORD-SPACING: 0px; PADDING-TOP: 0pt; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">$&nbsp;cd&nbsp;/</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">home</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">/</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">neople</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">/secsvr/bin</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="BORDER-BOTTOM: windowtext 0.5pt solid; BORDER-LEFT: windowtext 0.5pt solid; PADDING-BOTTOM: 0pt; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; PADDING-LEFT: 0pt; LETTER-SPACING: normal; PADDING-RIGHT: 0pt; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); BORDER-TOP: windowtext 0.5pt solid; BORDER-RIGHT: windowtext 0.5pt solid; WORD-SPACING: 0px; PADDING-TOP: 0pt; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">$&nbsp;tar&nbsp;zxvf&nbsp;INSTALL_PKG.tgz&nbsp;</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"> </SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"></SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">#&nbsp;</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">解壓後覆蓋掉舊版本的</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">SO</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">和</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">secagent</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">二進位檔案</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 21pt; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="TEXT-ALIGN: justify; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: -24pt; LETTER-SPACING: normal; FONT: medium 'Times New Roman'; WHITE-SPACE: normal; COLOR: rgb(0,0,0); MARGIN-LEFT: 24pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN style="FONT-FAMILY: 宋体; FONT-SIZE: 11pt">（5）</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">驗證版本資訊</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 21pt; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">檢查更新後的</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">SO</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">和</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">secagent</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">二進位檔案的版本號是否為需要更新的版本。版本號驗證方式見第</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">4</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">節描述。</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 21pt; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="TEXT-ALIGN: justify; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: -24pt; LETTER-SPACING: normal; FONT: medium 'Times New Roman'; WHITE-SPACE: normal; COLOR: rgb(0,0,0); MARGIN-LEFT: 24pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN style="FONT-FAMILY: 宋体; FONT-SIZE: 11pt">（6）</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">啟動遊戲伺服器進程</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 21pt; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">啟動時檢查</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">SO</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">是否已經被正確載入。</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 21pt; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="TEXT-ALIGN: justify; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: -24pt; LETTER-SPACING: normal; FONT: medium 'Times New Roman'; WHITE-SPACE: normal; COLOR: rgb(0,0,0); MARGIN-LEFT: 24pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN style="FONT-FAMILY: 宋体; FONT-SIZE: 11pt">（7）</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">啟動</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">SecAgent</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">安全服務</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 21pt; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">啟動方式和注意事項同上一節</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">"(5)</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">啟動</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">SecAgent</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">安全服務</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">"</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">小結所述。</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">&nbsp;</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">驗證版本資訊</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">4.1&nbsp;SDK</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">版本資訊</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">運行</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">objdump</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">查看</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">so</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">的版本號是否為需要發佈的版本：</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="BORDER-BOTTOM: windowtext 0.5pt solid; BORDER-LEFT: windowtext 0.5pt solid; PADDING-BOTTOM: 0pt; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; PADDING-LEFT: 0pt; LETTER-SPACING: normal; PADDING-RIGHT: 0pt; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); BORDER-TOP: windowtext 0.5pt solid; BORDER-RIGHT: windowtext 0.5pt solid; WORD-SPACING: 0px; PADDING-TOP: 0pt; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">$&nbsp;objdump&nbsp;-Dx&nbsp;libantisvrimport.so&nbsp;|grep&nbsp;SONAME</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">如下圖所示的</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">SO</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">版本號為</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">191</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">：</SPAN></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt"><IMG alt="" src="../../../../images/DNF操作手册.files/DNF操作手册17905.png"></SPAN></P><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">4.2&nbsp;</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">二進位進程版本資訊</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 21pt; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">查看</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">SecAgent</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">服務對應的二進位版本號直接加</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">-v</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">參數即可，注意</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">SecAgent</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">服務對應</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">secagent</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">、</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">zergsvr</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">、</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">gunnersvr</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">三個二進位進程。</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt"><o:p></O:P></SPAN></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 21pt; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">如下圖所示，對應的版本號為</SPAN><SPAN 
+style="FONT-FAMILY: Cambria; FONT-SIZE: 11pt">191</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt">版本</SPAN></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 21pt; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN style="FONT-FAMILY: PMingLiU; FONT-SIZE: 11pt"><IMG alt="" src="../../../../images/DNF操作手册.files/DNF操作手册18021.png">&nbsp;</P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 21pt; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); MARGIN-RIGHT: 0px; WORD-SPACING: 0px; 
+-webkit-text-stroke-width: 0px" class=MsoNormal dir=ltr align=left><IMG alt="" src="../../../../images/DNF操作手册.files/DNF操作手册18023.png"></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 21pt; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><IMG alt="" src="../../../../images/DNF操作手册.files/DNF操作手册18025.png"></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 21pt; LETTER-SPACING: normal; FONT: medium/16px 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal>&nbsp;</P></SPAN></SPAN></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2014. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
+</body>
+</html>

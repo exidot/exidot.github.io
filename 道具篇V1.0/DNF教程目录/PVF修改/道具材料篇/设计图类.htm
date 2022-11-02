@@ -1,0 +1,298 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>设计图类</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+
+
+
+<style>
+html,div { margin: 0; padding: 0;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
+}
+
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
+}
+
+#winchm_template_top{
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #585858;
+}
+
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
+}
+
+#winchm_template_content{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #B1CEFE;
+	border-top-style: solid;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
+	text-align: left;
+}
+
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+@media print
+{
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
+#winchm_template_button{
+visibility:hidden;
+}
+}
+
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
+</style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+
+
+
+
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="召唤类.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../../template2/btn_prev_n.gif" border="0"></a><A href="声音类.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../../template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation"><a href="index.html">Help</a> &gt; 
+<A href="道具材料篇.htm">道具材料篇</A> &gt; </div>
+	<div id="winchm_template_title">设计图类</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content"><STRONG>设计图类和制作图类</STRONG>
+     
+<P>[field image]<BR>`Item/FieldImage.img` 28&nbsp;</P>
+<UL>
+  <LI>
+<DIV>地图上显示图标贴图</DIV></LI></UL>
+<P>[stackable type]<BR>`[recipe]` 
+1&nbsp;<BR>[price]<BR>1000&nbsp;</P>
+<UL>
+  <LI>
+<DIV>道具类型：处方类</DIV>
+  <LI>
+<DIV>商店回收价格：1000<BR></DIV></LI></UL>
+<P>[int 
+data]<BR>6&nbsp;<BR>3042（无色大晶体）&nbsp;1&nbsp;<BR>3155（特级硬化剂）&nbsp;48&nbsp;<BR>3240（光辉魔石）&nbsp;7&nbsp;<BR>3164（卡坤的火炉使用券）&nbsp;2&nbsp;<BR>3166（下级元素结晶）&nbsp;30&nbsp;<BR>3174（透明石）&nbsp;1 
+<BR>1&nbsp;<BR>310107（加持的血之反噬断刃腰带改： 血之狂暴）&nbsp;1&nbsp;0<BR>[/int data]</P>
+<UL style="MARGIN-RIGHT: 0px" dir=ltr>
+  <LI>
+<DIV><STRONG>设计图或制作图所需内容</STRONG></DIV>
+  <LI>
+<DIV>第一个参数：6表示有6组数据，两个数值为一组</DIV>
+  <UL>
+    <LI>
+<DIV>第一个数值：物品ID</DIV>
+    <LI>
+<DIV>第二个数值：所需数量</DIV></LI></UL>
+  <LI>
+<DIV>第二个参数：1表示制作道具生成的种类</DIV>
+  <UL>
+    <LI>
+<DIV>第一个数值：生产道具ID</DIV>
+    <LI>
+<DIV>第二个数值：生产道具数量</DIV>
+    <LI>
+<DIV>第三个数值：未知</DIV></LI></UL></LI></UL>
+<P>[string data]<BR>`[craftmanship]`</P>
+<P>[/string data]</P>
+<UL>
+  <LI>
+<DIV> 串数据（相关）：</DIV>
+  <UL>
+  <LI>
+<DIV>  工艺：craftmanship  （制作：炼金、人偶）</DIV>
+  <LI>
+<DIV>  机械：machinary</DIV>
+  <LI>
+<DIV> 编织：weaving&nbsp;</DIV>
+    <UL>
+  <LI>
+<DIV> 三种都可以制作装备，具体对应未知</DIV></LI></UL></LI></UL></LI></UL>
+<P>[minimum itemmaking level]<BR>`<FONT color=#0000ff>harmor</FONT>` 5&nbsp;</P>
+<UL style="MARGIN-RIGHT: 0px" dir=ltr>
+  <LI>
+<DIV>最低道具制作等级：重甲，5级</DIV>
+  <UL>
+    <LI>
+<DIV><STRONG>相关参数：</STRONG></DIV>
+    <UL>
+    <LI>
+<DIV>武器weapon</DIV>
+    <LI>
+<DIV>手镯：wrist</DIV>
+    <LI>
+<DIV>项链：amulet</DIV>
+    <LI>
+<DIV>戒指：ring</DIV>
+    <LI>
+<DIV>布甲：cloth</DIV>
+    <LI>
+<DIV>重甲：harmor</DIV>
+    <LI>
+<DIV>轻甲：larmor</DIV>
+    <LI>
+<DIV>皮甲：leather</DIV>
+    <LI>
+<DIV>板甲：plate</DIV></LI></UL></LI></UL></LI></UL>
+<HR>
+（真 · 赤炼肩甲&nbsp; 设计图追加代码）
+<P>[special monster drop]<BR>1&nbsp;<BR>[difficulty for 
+extra drop]<BR>`[hero]`</P>
+<P>[/difficulty for extra drop]</P>
+<UL>
+  <LI>
+<DIV>   独立怪物掉落：1为打开（默认为1）</DIV>
+  <LI>
+<DIV>   困难度额外掉落：英雄级</DIV>
+  <UL>
+  <LI>
+<DIV>   简单：easy</DIV>
+  <LI>
+<DIV>   普通：medium</DIV>
+  <LI>
+<DIV>   困难：hard</DIV>
+  <LI>
+<DIV>   地狱：ultimate</DIV>
+  <LI>
+<DIV>   英雄：hero</DIV></LI></UL></LI></UL>
+<P>[dungeon type for extra drop]<BR>`[all]`</P>
+<P>[/dungeon type for extra drop]</P>
+<UL>
+  <LI>
+<DIV>    地下城类型额外掉落：all为所有</DIV></LI></UL>
+<HR>
+<P>[use 2nd upgrade table]</P>
+<UL>
+  <LI>
+<DIV>使用第二增幅表格</DIV></LI></UL></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2014. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,300 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>当HP或MP等属性改变时触发</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+
+
+
+<style>
+html,div { margin: 0; padding: 0;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
+}
+
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
+}
+
+#winchm_template_top{
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #585858;
+}
+
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
+}
+
+#winchm_template_content{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #B1CEFE;
+	border-top-style: solid;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
+	text-align: left;
+}
+
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+@media print
+{
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
+#winchm_template_button{
+visibility:hidden;
+}
+}
+
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
+</style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+
+
+
+
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="攻击对方某种行为状态时触发.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../../template2/btn_prev_n.gif" border="0"></a><A href="按组合键触发.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../../template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation"><a href="index.html">Help</a> &gt; 
+装备修改部分代码 &gt; <A href="../../../$$unsavedpage2.htm">触发相关</A> &gt; <A href="../触发相关.htm">触发条件</A> &gt; </div>
+	<div id="winchm_template_title">当HP或MP等属性改变时触发</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content">
+<P>力量每 400力量額外增加20</P>
+<UL>
+  <LI>
+<DIV>第一个参数为：hp，可换成mp或其他</DIV>
+  <LI>
+<DIV>第二个参数为比较符：&gt;或&lt;或大于等于</DIV>
+  <LI>
+<DIV> 第三个参数为数值</DIV>
+  <LI>
+<DIV> 第四个参数为截止位置（猜测）</DIV></LI></UL>
+<P>[if]</P>
+<P>[change status]<BR>`<FONT color=#ff0000>hp</FONT>` `&gt;` `%` 0&nbsp;`end`</P>
+<P>[/if]</P>
+<HR>
+<P>[then]</P>
+<P>[target]<BR>`myself` -1&nbsp;<BR>[stat change by 
+stat]<BR>`myself`-1&nbsp;`<FONT color=#ff0000>physical attack</FONT>` 
+400&nbsp;`<FONT color=#ff0000>physical attack</FONT>   ` `+` 
+20&nbsp;100&nbsp;<BR>[/then]</P>
+<UL>
+<LI >
+ 第一个参数为对象 
+  
+<LI >
+  第二个参数为范围 
+  
+
+<LI>
+第三个参数为属性 
+  
+<LI>第四个参数为第三个参数数值 
+  
+<LI>
+  第五个参数为属性 
+  <LI>
+第六个参数为运算符：如+，-，%等 
+  
+<LI>第七个参数为增加的数值 
+  <LI>
+第八个参数为最大值</LI></UL>
+<HR>
+
+<P><FONT color=#ff0000><STRONG>参数相关</STRONG></FONT> </P>
+<P>攻击型：</P>
+<UL>
+  <LI>
+  <DIV><BR>火属性抵抗：fire element<BR 
+  >暗属性抵抗：dark element<BR>光属性抵抗：light 
+  element
+<BR>
+水属性抵抗：water element</DIV>
+<LI>
+<DIV>火属性强化：fire attack</DIV>
+<LI >
+<DIV >
+  暗属性强化：drak attack</DIV>
+
+<LI>
+<DIV>光属性强化：light attack</DIV>
+<LI>
+  <DIV>
+水属性强化：water attack
+<BR>力量值：physical attack
+  <BR>
+体力值：physical 
+  attack
+<BR>智力值：magical attack
+  <BR>
+精神值：magical defense</DIV>
+<LI>
+  <DIV>
+攻击速度：attack speed</DIV>
+<LI>
+<DIV>施放速度：cast speed</DIV>
+<LI> <DIV>移动速度：move speed</DIV>
+<LI>
+<DIV>跳跃力：jump power
+<BR 
+  >装备物理攻击力：equipment physical attack<BR>装备魔法攻击力：equipment magical attack<BR>装备物理防御力：equipment physical 
+defense<BR>   装备魔法防御力：equipment magical 
+defense<BR>装备独立攻击力：separate attack 
+<BR 
+  >物理暴击：physical critical hit (rate) <BR 
+  >魔法暴击：magical critical hit (rate) <BR 
+  >命中率（负数显示为正）：stuck <BR 
+  >回避率（除以10）：stuck resistance <BR 
+  >硬直：hit recovery</DIV></LI></UL>
+<P>防御型：</P>
+<UL>
+  <LI>
+  <DIV><BR>HP最大值增加：HP MAX<BR 
+  >MP最大值增加：MP MAX<BR>HP恢复速度：HP regen 
+  speed<BR>MP恢复速度：MP regen speed<BR 
+  >负重：inventory limit<BR>火属性抗性：fire 
+  resistance<BR>暗属性抗性：dark resistance]<BR 
+  >光属性抗性：light resistance<BR 
+  >水属性抗性：water resistance<BR>所有属性抗性：all 
+  elemental resistance<BR>失明抗性：blind resistance<BR 
+  >感电抗性：lightning resistance<BR 
+  >灼伤抗性：lightning resistance<BR 
+  >冰冻抗性：freeze resistance<BR>束缚抗性：hold 
+  resistance<BR>睡眠抗性：sleep resistance <BR 
+  >出血抗性：bleeding resistance <BR 
+  >混乱抗性：confuse resistance <BR 
+  >诅咒抗性：curse resistance <BR>石化抗性：stone 
+  resistance <BR>所有异常状态抗性：all activestatus resistance</DIV>
+  <LI>
+  <DIV>随机：any</DIV></LI></UL></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2014. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
+</body>
+</html>

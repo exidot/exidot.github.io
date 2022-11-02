@@ -1,0 +1,207 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>DNF装备等级修改</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+
+
+
+<style>
+html,div { margin: 0; padding: 0;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
+}
+
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
+}
+
+#winchm_template_top{
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #585858;
+}
+
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
+}
+
+#winchm_template_content{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #B1CEFE;
+	border-top-style: solid;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
+	text-align: left;
+}
+
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+@media print
+{
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
+#winchm_template_button{
+visibility:hidden;
+}
+}
+
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
+</style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+
+
+
+
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="角色数据保存详细教程.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../template2/btn_prev_n.gif" border="0"></a><A href="../PVF修改/无限异界.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation"><a href="index.html">Help</a> &gt; 
+<A href="mysql修改.htm">mysql修改</A> &gt; </div>
+	<div id="winchm_template_title">DNF装备等级修改</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content">
+<P>连接数据库【home】下的【dxfdb】里【taiwan_main_web】,</P>
+<P>把【dnf_item_info.sql.gz】这个文件下载出来,下载完</P>
+<P>解压出来,把解压出来的文件用记事本方式打开然后一目了然了<BR>&nbsp;</P>
+<P>(注):记事本方式快捷找东西Ctrl+f</P>
+<P><BR>找到你要修改的装备属性</P>
+<P>比如27113,'巴恩的颶風短劍','name2_27113','[崩山擊]衝擊波範圍增加200%%\n[自動格擋]機率增加50%%',10,10,'',57,'',50,0,0,60,3100,91200,0,0,35,10000</P>
+<P>修改的物品等级的话,这把武器是60的,找到60,改成任意数字, 范围200%也可以改成任意数字,往后面啦找到y改成n 
+这里的y是允许修改,n是不允许,这个必须要改,然后保存</P>
+<P>在把这个<STRONG><FONT color=#ff0000>文件添加为解压文件</FONT></STRONG>,这里最关键的一步,<STRONG><FONT color=#ff0000>不能包涵文件夹</FONT></STRONG>,意思就是<FONT color=#ff0000><STRONG>直接</STRONG></FONT>点击这个文件<STRONG><FONT color=#ff0000>进行打包</FONT></STRONG>, 
+有些解压出来有个文件夹,进入文件夹直接打包,解压出来没有文件夹忽略这步,然后复制【<STRONG><FONT color=#ff0000>home/dxfdb/taiwan_cain_web</FONT></STRONG>】下的【<FONT color=#ff0000><STRONG>dnf_item_info.sql</STRONG></FONT>】,名称,后戳改成【<FONT color=#ff0000><STRONG>gz</STRONG></FONT>】即可</P>
+<P>删除本来的文件,把修改过的放进去,格式一定要和这个文件本身一样,一切都要在虚拟机关闭的情况下进行,不然无效. 这样修改之后不会出现武器带不上的情况</P>
+<P>爆率以及经验倍数也是同样的,必须在虚拟机下进行,也是这个数据库,<BR>【<STRONG><FONT color=#ff0000>home/dxfdb/ 
+home/dxfdb/</FONT></STRONG>】下的<STRONG><FONT color=#ff0000>dnf_event_info.sql</FONT></STRONG>,步骤和上面一样,.打开, 
+道具掉落率加倍|倍數',1,'0000-00-00','0000-00-00'); 
+1是倍数,修改想要倍数,把时间改成比如开始时间2015-08-24,<BR>结束时间9999-10-10.<BR>还有些东西也是这样进行,都在这个数据库,还需要慢慢发现,<BR>在提醒一下,关闭虚拟机,启动虚拟机到输入密码这里,就改这些东西,改完之后在启动.<BR></P></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2014. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
+</body>
+</html>

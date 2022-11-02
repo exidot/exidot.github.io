@@ -1,0 +1,535 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>架设教程</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+
+
+
+<style>
+html,div { margin: 0; padding: 0;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
+}
+
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
+}
+
+#winchm_template_top{
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #585858;
+}
+
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
+}
+
+#winchm_template_content{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #B1CEFE;
+	border-top-style: solid;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
+	text-align: left;
+}
+
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+@media print
+{
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
+#winchm_template_button{
+visibility:hidden;
+}
+}
+
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
+</style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+
+
+
+
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="开服PHPstudy下配置openssl可以解决频道无限连接问题.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../template2/btn_prev_n.gif" border="0"></a><A href="多频道修改教程.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation"><a href="index.html">Help</a> &gt; 
+<A href="../../$$unsavedpage14.htm">架设/开服指南</A> &gt; </div>
+	<div id="winchm_template_title">架设教程</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content">
+<P 
+style="TEXT-ALIGN: left; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: medium Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">写在前面的话,本教程引用【<A 
+title="" href="http://tieba.baidu.com/f?kw=%E5%8F%B0%E6%9C%8Ddnf&amp;ie=utf-8" 
+target=_blank>台服dnf吧</A>】-【小吧主】-【<A title=该用户已经连续签到38天了，连续30天一举“橙”名 
+href="http://tieba.baidu.com/home/main?un=%E5%8D%83%E5%B1%B1%E8%96%84%E6%9A%AE%E5%87%89&amp;ie=utf-8&amp;fr=pb" 
+target="_blank" data-field="{'un':'\u5343\u5c71\u8584\u66ae\u51c9'}" 
+alog-group="p_author">千山薄暮凉</A>】，帖子地址：<A 
+href="http://tieba.baidu.com/p/4052202793?pn=1" target=_blank>传送门</A></P>
+<P 
+style="TEXT-ALIGN: left; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: medium Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><STRONG>服务端文件下载：</STRONG><BR>链接：<A 
+href="http://jump.bdimg.com/safecheck/index?url=x+Z5mMbGPAvVIlwZePSt0B3tEqEFWbC4tOatFxkC6cIGWAc18GaCuvKJZyoh4lzAK8xv3hQqWor6fhttp://pan.baidu.com/s/1kTjaVGz" 
+target=_blank>http://pan.baidu.com/s/1kTjaVGz</A>&nbsp;密码：7fy9 大小：9.71GB</P>
+<P 
+style="TEXT-ALIGN: left; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: medium Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">百度云管家下载慢?用迅雷下载:<A 
+href="#xunlei">点我看教程</A></P>
+<P 
+style="TEXT-ALIGN: left; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: medium Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">---------------------------------------------------------------------------------------</P>
+<P>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT-FAMILY: Simsun; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+border=0 cellSpacing=0 cellPadding=0>
+  
+  <TR>
+    <TD style="TEXT-ALIGN: center; COLOR: rgb(255,0,0); FONT-SIZE: 24px"                         class=hentai colSpan=3>开始前的准备</TD></TR>
+  <TR>
+    <TD style="COLOR: rgb(0,0,0)" rowSpan=7 width=132>
+      <P style="TEXT-ALIGN: left">&nbsp;</P>
+      <P style="TEXT-ALIGN: left"><IMG alt="" src="../../images/D_images/所有用到的工具.jpg"></P></TD>
+    <TD style="COLOR: rgb(0,0,0)" vAlign=center colSpan=2 align=middle>
+      <P style="TEXT-ALIGN: left"><STRONG>你需要的工具有:</STRONG></P></TD></TR>
+  <TR>
+    <TD style="COLOR: rgb(0,0,0)" vAlign=center width=280 align=middle>软件名称</TD>
+    <TD style="COLOR: rgb(0,0,0)" vAlign=center width=185   align=middle>软件大小</TD></TR>
+  <TR>
+    <TD style="COLOR: rgb(0,0,0)" vAlign=center align=middle><STRONG 
+      style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" id=hnetai1 
+      class=hentai1>phpStudy</STRONG></TD>
+    <TD style="COLOR: rgb(0,0,0)" vAlign=center align=middle>35.6MB</TD></TR>
+  <TR>
+    <TD style="COLOR: rgb(0,0,0)" vAlign=center align=middle><SPAN 
+      style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+      class=hentai1>VMware-workstation-full-10</SPAN></TD>
+    <TD style="COLOR: rgb(0,0,0)" vAlign=center align=middle>471MB 【虚拟机】</TD></TR>
+  <TR>
+    <TD style="COLOR: rgb(0,0,0)" vAlign=center align=middle><SPAN 
+      style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+      class=hentai1>winscp_V5.7.5.5665_setup.1439891308</SPAN></TD>
+    <TD style="COLOR: rgb(0,0,0)" vAlign=center align=middle>5.58MB</TD></TR>
+  <TR>
+    <TD style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold"                             class=hentai1 vAlign=center align=middle>服务端</TD>
+    <TD style="COLOR: rgb(0,0,0)" vAlign=center align=middle>5.25GB</TD></TR>
+  <TR>
+    <TD style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold"                             class=hentai1 vAlign=center align=middle>客户端</TD>
+    <TD style="COLOR: rgb(0,0,0)" vAlign=center   align=middle>2.94GB</TD></TR></TABLE></P>
+<P 
+style="TEXT-ALIGN: left; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: medium Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">--------------------------------------------------</P>
+<P 
+style="TEXT-ALIGN: left; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: medium Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=body_left>准备好这些软件之后,那么我们现在就可以着手进入架设了.</P>
+<P 
+style="TEXT-ALIGN: left; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: medium Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=body_left>--------------------------------------------------</P>
+<P>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT-FAMILY: Simsun; LETTER-SPACING: normal; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+border=5 cellSpacing=0 cellPadding=0 width="49%" align=left>
+  
+  <TR>
+    <TD style="COLOR: rgb(0,0,0)" bgColor=#33cccc width="100%">
+      <UL>
+        <LI>
+        <P style="TEXT-ALIGN: left">任意盘里建议一个 DNS SF的文件夹,建议建在D盘根目录</P>
+        <P style="TEXT-ALIGN: left">解压【服务端】DNS SF</P>
+        <LI>
+        <P style="TEXT-ALIGN: left">解压【客户端】DNS SF</P>
+        <LI>
+        <P style="TEXT-ALIGN: left">安装【VWware虚拟机】默认C盘 已经安装过请点击传送门进入第二步：<A 
+        href="#VWware">传送门</A></P>
+        <LI>
+        <P style="TEXT-ALIGN: left">安装【phpStudy】到D:\DNS SF 已经安装过请点击传送门进入第三步:<A 
+        href="#phpStudy">传送门</A></P>
+        <LI>
+        <P style="TEXT-ALIGN: left">安装【winscp】D:\DNS SF<SPAN 
+        class=Apple-converted-space>&nbsp;</SPAN><SPAN style="TEXT-ALIGN: left" 
+        class=body_left>已经安装过请点击传送门进入第四步</SPAN>:<SPAN style="TEXT-ALIGN: left" 
+        class=body_left><A 
+  href="#winscp">传送门</A></SPAN></P></LI></UL></TD></TR></TABLE></P>
+<P 
+style="TEXT-ALIGN: left; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: medium Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=body_left>&nbsp;</P>
+<P 
+style="TEXT-ALIGN: left; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: medium Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
+<P 
+style="TEXT-ALIGN: left; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: medium Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
+<P 
+style="BORDER-BOTTOM-COLOR: rgb(0,0,0); TEXT-ALIGN: left; BORDER-RIGHT-WIDTH: 1px; WIDOWS: 1; TEXT-TRANSFORM: none; BORDER-TOP-COLOR: rgb(0,0,0); TEXT-INDENT: 0px; FONT: medium Simsun; WHITE-SPACE: normal; BORDER-TOP-WIDTH: 1px; BORDER-BOTTOM-WIDTH: 1px; LETTER-SPACING: normal; COLOR: rgb(0,0,0); BORDER-RIGHT-COLOR: rgb(0,0,0); BORDER-LEFT-COLOR: rgb(0,0,0); BORDER-LEFT-WIDTH: 1px; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=biaoge>&nbsp;</P>
+<P 
+style="TEXT-ALIGN: left; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: medium Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
+<P 
+style="TEXT-ALIGN: left; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: medium Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
+<P 
+style="TEXT-ALIGN: left; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: medium Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">&nbsp;</P>
+<P 
+style="TEXT-ALIGN: left; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: bold 24px Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,255); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=hentai1>&nbsp;</P>
+<P 
+style="TEXT-ALIGN: left; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: bold 24px Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,255); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=hentai1>安装【VWware虚拟机】,这个没有多大难度,所以就不多作阐述了</P>
+<BLOCKQUOTE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: medium Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">
+  <P style="TEXT-ALIGN: left">运行VMware,在 文件-打开 中选择虚拟机文件</P>
+  <P style="TEXT-ALIGN: left"><IMG alt="" src="../../images/D_images/VMware_01.jpg">  </P>
+  <P style="TEXT-ALIGN: left">点击 编辑-虚拟网络编辑器 进行设置</P>
+  <P style="TEXT-ALIGN: left"><IMG alt="" src="../../images/D_images/VMware_02.jpg"></P>
+  <P style="TEXT-ALIGN: left">第一个VMnet0，设置成桥接模式，桥接到选择你电脑的网卡，</P>
+  <P style="TEXT-ALIGN: left"><A 
+  onclick="$.stats.track(0, 'nlp_ps_word',{obj_name:'笔记本'});$.stats.track('Pb_content_wordner','ps_callback_statics')" 
+  href="http://jump.bdimg.com/safecheck/index?url=rN3wPs8te/pL4AOY0zAwhz3wi8AXlR5gsMEbyYdIw629loJPGO9VFwQTh9XhaayrImOuUl9obIdesUqvhcRz+hXSuwz9b96EragWmZ1jer1XQuxoOXhQscKny2/BV0yhK8xv3hQqWor6f+/XeB5AxLr14aQE4cbBBrmSwxc4lFrF7mYNJpEzrpwNnR2xbNUH7dqj7GmAfdt2Pah4egTNMg==" 
+  target=_blank>笔记本</A>的话一般都是数字开头，</P>
+  <P style="TEXT-ALIGN: left">台式机一般都是英文开头。</P>
+  <P style="TEXT-ALIGN: left">这步骤主要是为以后的内容做铺垫。</P>
+  <P style="TEXT-ALIGN: left"><IMG alt="" src="../../images/D_images/VMware_03.jpg"></P>
+  <P style="TEXT-ALIGN: left">VMnet8这里改成NAT模式，在红框中的东西一定要和图中完全一直，设置好以后点应用，确定。</P>
+  <P style="TEXT-ALIGN: left"><IMG alt="" src="../../images/D_images/VMware_04.jpg"></P>
+  <P 
+  style="TEXT-ALIGN: left"><STRONG>点击编辑此虚拟机设置，这里需要根据需要来做决定。</STRONG><BR><STRONG>内存：</STRONG>4G用户给虚拟机1G内存；8G用户给虚拟机4G内存，如果大于12G可以考虑给虚拟机8G内存<BR><STRONG>处理器：</STRONG>一般使用预设最好，不要轻易改变。<BR><STRONG>硬盘：</STRONG>点击硬盘面板的高级，选择永久，把独立打上勾。点击确定。<BR><STRONG>网络适配器：</STRONG>使用NAT模式，其他不要改动。<BR><STRONG>显示器：</STRONG>不要改动。<BR>这里肯定会有人提问我的电脑运行会不会卡，说实话我也说不好，</P>
+  <P style="TEXT-ALIGN: left">因为台式机绝大部分都是混搭，可能两台一样的机器就差一个<A 
+  onclick="$.stats.track(0, 'nlp_ps_word',{obj_name:'显卡'});$.stats.track('Pb_content_wordner','ps_callback_statics')" 
+  href="http://jump.bdimg.com/safecheck/index?url=rN3wPs8te/pL4AOY0zAwhz3wi8AXlR5gsMEbyYdIw610DNyA/XYMq2Kvc+zIxoURt6XyibVFgk4fbLMgytUg5Z4Q4OO30Ri8SAtVjSx1NjJY8K44RtEayHoHZTqUHx48yU6JdC/1k7qJicRRc5CQgFThK/Ol9CH6FApeG+wTT8IGixmks2FgL288Bi00mECWm5DJ7YwbhtYwPGbuJnYGNA==" 
+  target=_blank>显卡</A>，</P>
+  <P style="TEXT-ALIGN: left">性能差距就十万八千里，所以还是自己尝试去吧</P>
+  <P style="TEXT-ALIGN: left"><IMG alt="" src="../../images/D_images/VMware_05.jpg"></P>
+  <P style="TEXT-ALIGN: left"><IMG alt="" src="../../images/D_images/VMware_06.jpg"></P>
+  <P style="TEXT-ALIGN: left">右键你桌面上的网络图标，打开网络和共享中心，更改适配器设置，</P>
+  <P style="TEXT-ALIGN: left"><A 
+  onclick="$.stats.track(0, 'nlp_ps_word',{obj_name:'WindowsXP'});$.stats.track('Pb_content_wordner','ps_callback_statics')" 
+  href="http://jump.bdimg.com/safecheck/index?url=rN3wPs8te/pL4AOY0zAwhz3wi8AXlR5gsMEbyYdIw62uJTEHy7oZIwAH/b8r7p4bImOuUl9obIdesUqvhcRz+hXSuwz9b96EragWmZ1jer1XQuxoOXhQscKny2/BV0yhK8xv3hQqWor6f+/XeB5AxLr14aQE4cbBBrmSwxc4lFrF7mYNJpEzrpwNnR2xbNUH7dqj7GmAfdt2Pah4egTNMg==" 
+  target=_blank>WindowsXP</A>玩家从控制面板也能打开<BR>严格按照以下内容进行设置：</P>
+  <P style="TEXT-ALIGN: left"><STRONG>VM8右键打开属性，打开协议4属性，IP地址修改为1.1，</STRONG></P>
+  <P 
+  style="TEXT-ALIGN: left"><STRONG>高级选项中添加1.160，</STRONG><STRONG>然后一路确定回来</STRONG></P>
+  <P style="TEXT-ALIGN: left"><IMG alt="" src="../../images/D_images/VMware_07.jpg"></P>
+  <P 
+  style="TEXT-ALIGN: left">这里要是写着未启用或者未能识别之类的话（写着已启用的跳过这个步骤）<BR>打开开始菜单，找到运行，然后输入regedit并回车。进入注册表编辑器</P>
+  <P style="TEXT-ALIGN: left"><IMG alt="" src="../../images/D_images/VMware_08.jpg"></P>
+  <P 
+  style="TEXT-ALIGN: left">如下图所示，依次找到这个位置，在0到12（也有可能是15,18）这些数字之间，找到数据含有VM8和VM1的<BR><SPAN 
+  style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1><STRONG>然后在空白处右键新建，选择，DWORD（32-位）值（D），</STRONG></SPAN></P>
+  <P style="TEXT-ALIGN: left"><SPAN 
+  style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1><STRONG>名字改成*NdisDeviceType，</STRONG></SPAN></P>
+  <P style="TEXT-ALIGN: left"><SPAN 
+  style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1><STRONG>然后双击它，把数值数据从0改成1，单击确定。</STRONG></SPAN><BR>VM8和VM1的两个都要这样设置一下才可以，就像我上面第二个图第四行一样就可以了。</P>
+  <P style="TEXT-ALIGN: left"><IMG alt="" src="../../images/D_images/VMware_09.jpg"></P>
+  <P style="TEXT-ALIGN: left"><IMG alt="" src="../../images/D_images/VMware_10.jpg"></P>
+  <P style="TEXT-ALIGN: left"><IMG alt="" src="../../images/D_images/VMware_11.jpg"></P>
+  <P style="TEXT-ALIGN: left">操作好之后,重启一下VM的网络适配器就可以了</P>
+  <P 
+  style="TEXT-ALIGN: left; COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1>先右键将其禁用,再启用就可以了</P>
+  <P 
+  style="TEXT-ALIGN: left; COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1><IMG alt="" src="../../images/D_images/VMware_12.jpg"></P>
+  <P style="TEXT-ALIGN: left" class=body_left>那么我们现在可以运行虚拟机了</P>
+  <P style="TEXT-ALIGN: left" class=body_left><IMG alt="" src="../../images/D_images/VMware_13.jpg"></P>
+  <P style="TEXT-ALIGN: left" class=body_left>启动过程中可能会出现Intel 
+  VT-x还在禁用,那么你就需要进入主板BIOS进入设置</P>
+  <P style="TEXT-ALIGN: left" class=body_left>如果此处有什么不懂,请百度一下,关键词:<SPAN 
+  style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1>Intel VT-x</SPAN></P></BLOCKQUOTE>
+<P 
+style="TEXT-ALIGN: left; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: bold 24px Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,255); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=hentai1>接下来开始设置phpStudy</P>
+<BLOCKQUOTE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: medium Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">
+  <P style="TEXT-ALIGN: left" class=body_left><A name=VWware></A></P>
+  <P style="TEXT-ALIGN: left" class=body_left>将 台服DNF70版本【data】解压,并将其他复制到<SPAN 
+  class=Apple-converted-space>&nbsp;</SPAN><SPAN 
+  style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1>phpStudy\MySQL\data</SPAN></P>
+  <P style="TEXT-ALIGN: left" class=body_left><IMG alt="" src="../../images/D_images/phpStudy_01.jpg"></P>
+  <P style="TEXT-ALIGN: left" class=body_left>如果复制过程中提示有文件正在使用,请先停止<SPAN 
+  style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1>phpStudy</SPAN>的两个服务</P>
+  <P style="TEXT-ALIGN: left" class=body_left><IMG alt="" src="../../images/D_images/phpStudy_02.jpg"></P>
+  <P style="TEXT-ALIGN: left" class=body_left>覆盖完成之后,再运行<SPAN 
+  style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1>phpStudy</SPAN><SPAN 
+  class=Apple-converted-space>&nbsp;</SPAN>并启动服务,</P>
+  <P style="TEXT-ALIGN: left" class=body_left>两个灯成绿色之后.说明已经正常运行.</P>
+  <P style="TEXT-ALIGN: left" 
+  class=body_left>两个绿灯都亮了之后点MySQL管理器，选择第一个Front，在新的界面中选择属性。</P>
+  <P style="TEXT-ALIGN: left" class=body_left><IMG alt="" src="../../images/D_images/phpStudy_03.jpg"></P>
+  <P style="TEXT-ALIGN: left" 
+  class=body_left>用户和密码如图所示，想复制粘贴去工具里面找文档。然后点确定，然后点打开</P>
+  <P style="TEXT-ALIGN: left" class=body_left>用户名:game</P>
+  <P style="TEXT-ALIGN: left" class=body_left>密码 :uu5!^%jg</P>
+  <P style="TEXT-ALIGN: left" class=body_left><IMG alt="" src="../../images/D_images/phpStudy_04.jpg"></P>
+  <P style="TEXT-ALIGN: left" class=body_left>在<SPAN 
+  style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1>d_taiwan</SPAN>里面选择<SPAN 
+  style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1>db_connect</SPAN>，点击数据浏览器，</P>
+  <P style="TEXT-ALIGN: left" class=body_left>把里面的ip全都改成<SPAN 
+  style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1>192.168.1.160</SPAN><SPAN 
+  class=Apple-converted-space>&nbsp;</SPAN>你可以用方向键和粘贴键</P>
+  <P style="TEXT-ALIGN: left" class=body_left>从第一个到最后一个全都要改，</P>
+  <P style="TEXT-ALIGN: left" class=body_left>还有下面和<SPAN 
+  style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1>db_connect</SPAN>挨着的130516里面的ip也全都改成<SPAN 
+  style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1>192.168.1.160</SPAN></P>
+  <P style="TEXT-ALIGN: left" class=body_left>复制和粘贴的快捷键分别是Ctrl C和Ctrl V</P>
+  <P style="TEXT-ALIGN: left" class=body_left><IMG alt="" src="../../images/D_images/phpStudy_05.jpg"></P>
+  <P style="TEXT-ALIGN: left" class=body_left>往下拉，找到<SPAN 
+  style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1>geo_allow</SPAN>，设置成如图的样子。</P>
+  <P style="TEXT-ALIGN: left" class=body_left>如果你只有一排，你可以用方向键新建一排，</P>
+  <P 
+  style="TEXT-ALIGN: left; COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1><STRONG>注意后面的时间设置上，上面的一定要比下面的早</STRONG>，</P>
+  <P style="TEXT-ALIGN: left" class=body_left>不然你频道都进不去。</P>
+  <P style="TEXT-ALIGN: left" class=body_left><BR><IMG alt="" src="../../images/D_images/phpStudy_06.jpg"></P>
+  <P style="TEXT-ALIGN: left" 
+  class=body_left>设置完成之后,我们再回到虚拟机,等待一下,直到出现如下图所示,输入</P>
+  <P style="TEXT-ALIGN: left" class=body_left>账号:<SPAN 
+  style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1>root</SPAN></P>
+  <P style="TEXT-ALIGN: left" class=body_left>密码:<SPAN 
+  style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1>123456</SPAN><SPAN 
+  class=Apple-converted-space>&nbsp;</SPAN>(密码输入的时候会不显示,不用担心,这个是正常现象)</P>
+  <P style="TEXT-ALIGN: left" class=body_left><IMG alt="" src="../../images/D_images/phpStudy_07.jpg"></P></BLOCKQUOTE>
+<P 
+style="TEXT-ALIGN: left; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: bold 24px Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,255); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=hentai1>现在进入关于winscp的设置</P>
+<BLOCKQUOTE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: medium Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">
+  <P style="TEXT-ALIGN: left" class=body_left><A name=phpStudy></A></P>
+  <P style="TEXT-ALIGN: left" class=body_left>设置的参数如下图所示</P>
+  <P style="TEXT-ALIGN: left" class=body_left><IMG alt="" src="../../images/D_images/winscp_01.jpg"></P>
+  <P style="TEXT-ALIGN: left" class=body_left>然后再点击登陆:</P>
+  <P style="TEXT-ALIGN: left" class=body_left><IMG alt="" src="../../images/D_images/winscp_02.jpg"></P>
+  <P style="TEXT-ALIGN: left" class=body_left>如果登陆过程中出现如下图所示,</P>
+  <P style="TEXT-ALIGN: left" class=body_left><IMG alt="" src="../../images/D_images/winscp_03.jpg"></P>
+  <P style="TEXT-ALIGN: left" class=body_left>请关闭 网络和共享中心 - 更改高级共享设置 
+  中最底下那一项,操作如下:</P>
+  <P style="TEXT-ALIGN: left" class=body_left><IMG alt="" src="../../images/D_images/winscp_03_00.jpg"></P>
+  <P style="TEXT-ALIGN: left" class=body_left><IMG alt="" src="../../images/D_images/winscp_03_01.jpg"></P>
+  <P style="TEXT-ALIGN: left" class=body_left><IMG alt="" src="../../images/D_images/winscp_04.jpg"></P>
+  <P style="TEXT-ALIGN: left" class=body_left><IMG alt="" src="../../images/D_images/winscp_05.jpg"></P>
+  <P style="TEXT-ALIGN: left" class=body_left>下面回到正题winscp 登录之后的操作,</P>
+  <P style="TEXT-ALIGN: left" class=body_left>登录之后会有一个类似文件浏览器的窗口,</P>
+  <P style="TEXT-ALIGN: left" class=body_left>将图中的文件拖入相对路径覆盖即可.</P>
+  <P style="TEXT-ALIGN: left" class=body_left><IMG alt="" src="../../images/D_images/winscp_06.jpg"></P>
+  <P style="TEXT-ALIGN: left" class=body_left><IMG alt="" src="../../images/D_images/winscp_07.jpg"></P>
+  <P style="TEXT-ALIGN: left" 
+class=body_left>到这一步,winscp的设置就已经完成了.</P></BLOCKQUOTE>
+<P 
+style="TEXT-ALIGN: left; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: medium Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+class=hentai1>下面我们进入客户端的操作.</SPAN></P>
+<BLOCKQUOTE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: medium Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">
+  <P style="TEXT-ALIGN: left"><A name=winscp></A></P>
+  <P style="TEXT-ALIGN: left">把这两个放到客户端里面，注意都是替换，提示你已有该文件的时候，选择覆盖。</P>
+  <P 
+  style="TEXT-ALIGN: left; COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1>注意:ImagePacks2.zip需要解压再放入.</P>
+  <P style="TEXT-ALIGN: left"><IMG alt="" src="../../images/D_images/kehuduan_00.jpg"></P>
+  <P style="TEXT-ALIGN: left">将<SPAN 
+  style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1>1.bat</SPAN>放到DOF的根目录中,并将其<SPAN 
+  style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1>发送到桌面快捷方式</SPAN>.</P>
+  <P style="TEXT-ALIGN: left"><IMG alt="" src="../../images/D_images/kehuduan_02.jpg"></P>
+  <P style="TEXT-ALIGN: left">win7路径:<SPAN 
+  style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1>C:\Windows\System32\drivers\etc</SPAN></P>
+  <P style="TEXT-ALIGN: left">双击 HOST 文件,用记事本打开</P>
+  <P style="TEXT-ALIGN: left">HOST文件里最下面一行添加一行:<SPAN 
+  style="COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1>192.168.1.200 start.dnf.tw</SPAN></P>
+  <P 
+  style="TEXT-ALIGN: left; COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1>保存并关闭.</P>
+  <P 
+  style="TEXT-ALIGN: left; COLOR: rgb(0,0,255); FONT-SIZE: 24px; FONT-WEIGHT: bold" 
+  class=hentai1><IMG alt="" src="../../images/D_images/kehuduan_01.jpg"></P></BLOCKQUOTE>
+<P 
+style="TEXT-ALIGN: left; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: bold 24px Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,255); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=hentai1>再回到虚拟机</P>
+<BLOCKQUOTE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: medium Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">
+  <P style="TEXT-ALIGN: left" class=body_left>现在回到虚拟机，输入ls，不是is是L的小写，回车。</P>
+  <P style="TEXT-ALIGN: left" class=body_left>然后输入service mysqld start，回车。</P>
+  <P style="TEXT-ALIGN: left" class=body_left>然后输入./run，回车。漫长的等待，可能需要五六分钟左右</P>
+  <P style="TEXT-ALIGN: left" class=body_left><STRONG><IMG alt="" src="../../images/D_images/VMware_14.jpg">    
+  </STRONG></P>
+  <P style="TEXT-ALIGN: left" class=body_left><STRONG>出来下面这CN HK KR MO 
+  TW，俗称五国，再加上下面这几个Connect基本上就代表成功了</STRONG>，开游戏</P>
+  <P style="TEXT-ALIGN: left" class=body_left><IMG alt="" src="../../images/D_images/VMware_15.jpg"></P></BLOCKQUOTE>
+<P 
+style="TEXT-ALIGN: left; WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: bold 24px Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,255); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=hentai1>到此为止已经成功了.下面开始运行游戏测试一下</P>
+<BLOCKQUOTE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; FONT: medium Simsun; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">
+  <P style="TEXT-ALIGN: left" class=body_left>双击桌面上的1.bat</P>
+  <P style="TEXT-ALIGN: left" class=body_left><IMG alt="" src="../../images/D_images/kehuduan_03.jpg"></P>
+  <P style="TEXT-ALIGN: left" class=body_left>&nbsp;</P>
+  <P style="TEXT-ALIGN: left" class=body_left><FONT face=Helvetica><STRONG><FONT size=3><SPAN 
+  style="BOX-SIZING: content-box; COLOR: rgb(225,6,2)" 
+  class=edit_font_color>1.黑频道解决办法：</SPAN><BR 
+  style="BOX-SIZING: content-box; WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/24px 'Helvetica Neue', Helvetica, Arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"></FONT></STRONG><SPAN 
+  style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; DISPLAY: inline !important; FONT: 14px/24px 'Helvetica Neue', Helvetica, Arial, sans-serif; WHITE-SPACE: normal; FLOAT: none; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">如果你的步骤完全按照我的来，频道页面还是灰色的（无法选择和打开）那么你可以关闭游戏后，回到虚拟机依次输入：./stop两次，再输入一次./run</SPAN></FONT><BR 
+  style="BOX-SIZING: content-box; WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/24px 'Helvetica Neue', Helvetica, Arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+  style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; DISPLAY: inline !important; FONT: 14px/24px 'Helvetica Neue', Helvetica, Arial, sans-serif; WHITE-SPACE: normal; FLOAT: none; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">等待五国再次出现后，打开客户端。如果还是不行，循环往复。</SPAN><BR 
+  style="BOX-SIZING: content-box; WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/24px 'Helvetica Neue', Helvetica, Arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+  style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; DISPLAY: inline !important; FONT: 14px/24px 'Helvetica Neue', Helvetica, Arial, sans-serif; WHITE-SPACE: normal; FLOAT: none; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">【原因：如果不是设置有误，比如cfg忘了替换之类的，黑频道一般是因为你的配置不足或内存不够】</SPAN><BR 
+  style="BOX-SIZING: content-box; WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/24px 'Helvetica Neue', Helvetica, Arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><BR 
+  style="BOX-SIZING: content-box; WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/24px 'Helvetica Neue', Helvetica, Arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><BR 
+  style="BOX-SIZING: content-box; WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/24px 'Helvetica Neue', Helvetica, Arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><BR 
+  style="BOX-SIZING: content-box; WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/24px 'Helvetica Neue', Helvetica, Arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><BR 
+  style="BOX-SIZING: content-box; WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/24px 'Helvetica Neue', Helvetica, Arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><STRONG 
+  style="BOX-SIZING: content-box; WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 700 14px/24px 'Helvetica Neue', Helvetica, Arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+  style="BOX-SIZING: content-box; COLOR: rgb(225,6,2)" 
+  class=edit_font_color>2.输入法无法输入：</SPAN></STRONG><BR 
+  style="BOX-SIZING: content-box; WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/24px 'Helvetica Neue', Helvetica, Arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+  style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; DISPLAY: inline !important; FONT: 14px/24px 'Helvetica Neue', Helvetica, Arial, sans-serif; WHITE-SPACE: normal; FLOAT: none; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">简单粗暴的方法是下载一个繁体字输入法。或者是按照搜狗拼音输入法，并且安装工具库里面的搜狗拼音输入法注册工具。在你的输入法一栏右键属性，添加搜狗繁体字输入法即可。</SPAN><BR 
+  style="BOX-SIZING: content-box; WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/24px 'Helvetica Neue', Helvetica, Arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><BR 
+  style="BOX-SIZING: content-box; WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/24px 'Helvetica Neue', Helvetica, Arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><BR 
+  style="BOX-SIZING: content-box; WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/24px 'Helvetica Neue', Helvetica, Arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><BR 
+  style="BOX-SIZING: content-box; WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/24px 'Helvetica Neue', Helvetica, Arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><BR 
+  style="BOX-SIZING: content-box; WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/24px 'Helvetica Neue', Helvetica, Arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><STRONG 
+  style="BOX-SIZING: content-box; WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 700 14px/24px 'Helvetica Neue', Helvetica, Arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+  style="BOX-SIZING: content-box; COLOR: rgb(225,6,2)" 
+  class=edit_font_color>3.再次进入游戏时应如何操作：</SPAN></STRONG><BR 
+  style="BOX-SIZING: content-box; WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; FONT: 14px/24px 'Helvetica Neue', Helvetica, Arial, sans-serif; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px"><SPAN 
+  style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; DISPLAY: inline !important; FONT: 14px/24px 'Helvetica Neue', Helvetica, Arial, sans-serif; WHITE-SPACE: normal; FLOAT: none; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px">如果你都按照步骤来做并成功进入游戏，再次进入游戏的时候只需要先打开VM虚拟机和PHP，在虚拟机输入完账号密码并登陆后，登陆WinSCP。回到虚拟机后完成./run直到五国出现，登陆游戏即可。</SPAN></P></BLOCKQUOTE></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2014. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
+</body>
+</html>

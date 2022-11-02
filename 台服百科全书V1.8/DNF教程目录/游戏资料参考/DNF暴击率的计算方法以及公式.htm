@@ -1,0 +1,197 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>DNF暴击率的计算方法以及公式</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+
+
+
+<style>
+html,div { margin: 0; padding: 0;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
+}
+
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
+}
+
+#winchm_template_top{
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #585858;
+}
+
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
+}
+
+#winchm_template_content{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #B1CEFE;
+	border-top-style: solid;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
+	text-align: left;
+}
+
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+@media print
+{
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
+#winchm_template_button{
+visibility:hidden;
+}
+}
+
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
+</style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+
+
+
+
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="../PVF修改/修改角色金币携带上限.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../template2/btn_prev_n.gif" border="0"></a><A href="../PVF修改/任务文件说明.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation"><a href="index.html">Help</a> &gt; 
+<A href="../PVF修改/PVF修改.htm">PVF修改</A> &gt; <A href="../PVF修改/全局相关.htm">全局相关</A> &gt; </div>
+	<div id="winchm_template_title">DNF暴击率的计算方法以及公式</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content">
+<P>　【公式说明】<BR>　　<BR>　　暴击伤害计算=非暴击最终伤害*[150%系统暴击加成*（1+装备爆伤加成）*（1+防具精通爆伤总和）*（1+爆伤BUFF加成）+加算类爆伤BUFF加成]<BR>　　<BR>　　公式中的一些说明：<BR>　　<BR>　　最终伤害：固伤、百分比技能经过复杂的伤害公式后，计算得出的伤害值；得出的伤害值最后再受暴击、破招、黄字装备、白字装备等可以放大最终伤害的算法影响。<BR>　　<BR>　　系统默认的暴击加成为1.5倍。<BR>　　<BR>　　装备爆伤暴击时放大最终伤害，单多个爆伤装备同时佩戴时，只计算爆伤最高的那个值。<BR>　　<BR>　　防具精通爆伤经过数次改版后，现在所有防具精通的爆伤都是乘算防具精通爆伤总和了，这类防具精通的职业有刺客、影舞者、死灵、剑豪，还有没有别的就不记得了（黑妹占了3个，好像没什么不对）。<BR>　　<BR>　　爆伤BUFF即死亡左轮、人剑合一、暗杀信条这类加爆伤的BUFF技能，以前人剑合一是加算类的爆伤，后来经过多次改版后改成乘算了。<BR>　　<BR>　　加算类爆伤BUFF加成即直接把加成百分比计算在爆伤倍率最后的，而非复利式计算的；现在我只知道还剩下刺客的一觉爆伤BUFF了，其他这类技能大多都改成乘算了，然而刺客二觉也没有对这个进行调整，悲伤。</P>
+<P>　　套用公式：<BR>　　<BR>　　非暴击最终伤害16330*150%系统暴击加成=24945</P>
+<P>　　刺客防具精通爆伤总和40%<BR>　　<BR>　　套用公式：<BR>　　<BR>　　非暴击最终伤害20978*150%系统暴击加成*（1+40%防具精通爆伤总和）=44053</P>
+<P>　　龙女宠物+10%装备爆伤<BR>　　<BR>　　套用公式：<BR>　　<BR>　　非暴击最终伤害20462*150%系统暴击加成*（1+10%装备爆伤加成）*（1+40%防具精通爆伤总和）=47267</P>
+<P>　　3层月轮舞爆伤BUFF为45%的加算类爆伤<BR>　　<BR>　　套用公式：<BR>　　<BR>　　非暴击最终伤害8806*[150%系统暴击加成*（1+10%装备爆伤加成）*（1+40%防具精通爆伤总和）+45%加算类爆伤BUFF加成]=24304<BR>　　<BR>　　以上计算可以得知爆伤计算其实规律很简单，需要记住的只有不同爆伤之间的算法，之后就是简单的加法和乘法了。</P></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2014. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
+</body>
+</html>

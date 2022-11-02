@@ -1,0 +1,237 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>开服PHPstudy下配置openssl可以解决频道无限连接问题</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+
+
+
+<style>
+html,div { margin: 0; padding: 0;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
+}
+
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
+}
+
+#winchm_template_top{
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #585858;
+}
+
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
+}
+
+#winchm_template_content{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #B1CEFE;
+	border-top-style: solid;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
+	text-align: left;
+}
+
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+@media print
+{
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
+#winchm_template_button{
+visibility:hidden;
+}
+}
+
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
+</style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+
+
+
+
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="外网教程/解析GM命令如何调试运用.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../template2/btn_prev_n.gif" border="0"></a><A href="架设教程.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation"><a href="index.html">Help</a> &gt; 
+<A href="../../$$unsavedpage14.htm">架设/开服指南</A> &gt; </div>
+	<div id="winchm_template_title">开服PHPstudy下配置openssl可以解决频道无限连接问题</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content">
+<P>php开启openssl的方法，大多数情况下openssl是没有开启的，要想启用需要进行下简单的设置：</P>
+<P>&nbsp;phpStudy下开启方法：</P>
+<P>1：其他选项菜单、打开配置文件、打开php-ini。搜索extension=php_openssl.dll去掉前面的注释‘；’</P>
+<P>2：在phpStudy安装目录中打开你设置的php版本文件夹，例如如5.3版本打开‘php53’文件夹。搜索php_openssl.dll，ssleay32.dll，libeay32.dll这3个文件，全部拷贝到‘C:\WINDOWS\system32\’文件夹下。</P>
+<P>3：重启phpStudy</P>
+<P>至此，openssl功能就开启了。</P>
+<P>&nbsp;windows下开启方法：</P>
+<P>1： 首先检查php.ini中；extension=php_openssl.dll是否存在， 如果存在的话去掉前面的注释符‘；’， 
+如果不存在这行，那么添加extension=php_openssl.dll。</P>
+<P>2： 讲php文件夹下的： php_openssl.dll， ssleay32.dll， libeay32.dll 3个文件拷贝到 
+WINDOWS\system32\&nbsp; 文件夹下。</P>
+<P>3： 重启apache或者iis</P>
+<P>至此，openssl功能就开启了。</P>
+<P>Linux下开启方法：</P>
+<P>我使用的是锦尚数据的云主机，PHP版本：5.2.14</P>
+<P>下面方案就以我的主机为例讲解为PHP添加openssl模块支持。</P>
+<P>网上一些答案说要重新编译PHP，添加configure参数，增加openssl的支持。这里讲一个不需要重新编译的方法。</P>
+<P>如果服务器上存在PHP安装包文件最好，如果已经删除，去下载和phpinfo页面显示版本一样的PHP安装文件，我这里是 
+php-5.2.14.tar.gz</P>
+<P>推荐去搜狐镜像下载，网易镜像没有找到。地址为： <A 
+href="http://mirrors.sohu.com/php/">http://mirrors.sohu.com/php/</A></P>
+<P>用ssh工具连接到主机。</P>
+<P># 下载到/var/www/php5目录下</P>
+<P>cd /var/www/php5</P>
+<P>wget <A 
+href="http://mirrors.sohu.com/php/php-5.2.14.tar.gz">http://mirrors.sohu.com/php/php-5.2.14.tar.gz</A></P>
+<P># 解压</P>
+<P>tar zxvf php-5.2.14.tar.gz</P>
+<P># 进入PHP的openssl扩展模块目录</P>
+<P>cd php-5.2.14/ext/openssl/</P>
+<P>/var/www/php5/bin/phpize # 这里为你自己的phpize路径，如果找不到，使用whereis phpize查找</P>
+<P># 执行后，发现错误 无法找到config.m4 ，config0.m4就是config.m4。直接重命名</P>
+<P>mv config0.m4 config.m4</P>
+<P>/var/www/php5/bin/phpize</P>
+<P>./configure --with-openssl --with-php-config=/var/www/php5/bin/php-config</P>
+<P>make</P>
+<P>make install</P>
+<P># 安装完成后，会返回一个.so文件（openssl.so）的目录。在此目录下把openssl.so 文件拷贝到你在php.ini 中指定的 
+extension_dir 下（在php.ini文件中查找：extension_dir =），我这里的目录是 
+var/www/php5/lib/php/extensions</P>
+<P># 编辑php.ini文件，在文件最后添加</P>
+<P>extension=openssl.so</P>
+<P># 重启Apache即可</P>
+<P>/usr/local/apache2/bin/apachectl restart</P>
+<P>好了，现在就成功添加openssl支持。</P></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2014. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
+</body>
+</html>

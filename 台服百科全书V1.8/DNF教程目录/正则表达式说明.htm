@@ -1,0 +1,645 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>正则表达式说明</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+
+
+
+<style>
+html,div { margin: 0; padding: 0;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
+}
+
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
+}
+
+#winchm_template_top{
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #585858;
+}
+
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
+}
+
+#winchm_template_content{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #B1CEFE;
+	border-top-style: solid;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
+	text-align: left;
+}
+
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+@media print
+{
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
+#winchm_template_button{
+visibility:hidden;
+}
+}
+
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
+</style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+
+
+
+
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="架设与开服指南/DNF操作手册/第十九章/第四節_GMTOOL.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../template2/btn_prev_n.gif" border="0"></a><A href="正则表达式一.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation"><a href="index.html">Help</a> &gt; 
+</div>
+	<div id="winchm_template_title">正则表达式说明</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content">
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; BORDER-SPACING: 0px; BORDER-COLLAPSE: collapse; FONT: 12px/18px 微软雅黑; WHITE-SPACE: normal; LETTER-SPACING: normal; COLOR: rgb(51,51,51); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class="table-view log-set-param" log-set-param="table_view">
+  
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">元字符</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">描述</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">\</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">将下一个字符标记符、或一个向后引用、或一个八进制转义符。例如，“\\n”匹配\n。“\n”匹配换行符。序列“\\”匹配“\”而“\(”则匹配“(”。即相当于多种编程语言中都有的“转义字符”的概念。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">^</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">匹配输入字符串的开始位置。如果设置了RegExp对象的Multiline属性，^也匹配“\n”或“\r”之后的位置。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">$</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">匹配输入字符串的结束位置。如果设置了RegExp对象的Multiline属性，$也匹配“\n”或“\r”之前的位置。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">*</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">匹配前面的子表达式任意次。例如，zo*能匹配“z”，“zo”以及“zoo”。*等价于{0,}。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">+</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">匹配前面的子表达式一次或多次(大于等于1次）。例如，“zo+”能匹配“zo”以及“zoo”，但不能匹配“z”。+等价于{1,}。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">?</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">匹配前面的子表达式零次或一次。例如，“do(es)?”可以匹配“do”或“does”中的“do”。?等价于{0,1}。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">{n}</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">n是一个非负整数。匹配确定的n次。例如，“o{2}”不能匹配“Bob”中的“o”，但是能匹配“food”中的两个o。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">{n,}</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">n是一个非负整数。至少匹配n次。例如，“o{2,}”不能匹配“Bob”中的“o”，但能匹配“foooood”中的所有o。“o{1,}”等价于“o+”。“o{0,}”则等价于“o*”。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">{n,m}</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">m和n均为非负整数，其中n&lt;=m。最少匹配n次且最多匹配m次。例如，“o{1,3}”将匹配“fooooood”中的前三个o。“o{0,1}”等价于“o?”。请注意在逗号和两个数之间不能有空格。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">?</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">当该字符紧跟在任何一个其他限制符（*,+,?，{n}，{n,}，{n,m}）后面时，匹配模式是非贪婪的。非贪婪模式尽可能少的匹配所搜索的字符串，而默认的贪婪模式则尽可能多的匹配所搜索的字符串。例如，对于字符串“oooo”，“o+?”将匹配单个“o”，而“o+”将匹配所有“o”。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">.点</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">匹配除“\r\n”之外的任何单个字符。要匹配包括“\r\n”在内的任何字符，请使用像“[\s\S]”的模式。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">(pattern)</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">匹配pattern并获取这一匹配。所获取的匹配可以从产生的Matches集合得到，在VBScript中使用SubMatches集合，在JScript中则使用$0…$9属性。要匹配圆括号字符，请使用“\(”或“\)”。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">(?:pattern)</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">非获取匹配，匹配pattern但不获取匹配结果，不进行存储供以后使用。这在使用或字符“(|)”来组合一个模式的各个部分是很有用。例如“industr(?:y|ies)”就是一个比“industry|industries”更简略的表达式。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">(?=pattern)</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">非获取匹配，正向肯定预查，在任何匹配pattern的字符串开始处匹配查找字符串，该匹配不需要获取供以后使用。例如，“Windows(?=95|98|NT|2000)”能匹配“Windows2000”中的“Windows”，但不能匹配“Windows3.1”中的“Windows”。预查不消耗字符，也就是说，在一个匹配发生后，在最后一次匹配之后立即开始下一次匹配的搜索，而不是从包含预查的字符之后开始。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">(?!pattern)</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">非获取匹配，正向否定预查，在任何不匹配pattern的字符串开始处匹配查找字符串，该匹配不需要获取供以后使用。例如“Windows(?!95|98|NT|2000)”能匹配“Windows3.1”中的“Windows”，但不能匹配“Windows2000”中的“Windows”。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">(?&lt;=pattern)</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">非获取匹配，反向肯定预查，与正向肯定预查类似，只是方向相反。例如，“(?&lt;=95|98|NT|2000)Windows”能匹配“2000Windows”中的“Windows”，但不能匹配“3.1Windows”中的“Windows”。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">(?&lt;!pattern)</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">非获取匹配，反向否定预查，与正向否定预查类似，只是方向相反。例如“(?&lt;!95|98|NT|2000)Windows”能匹配“3.1Windows”中的“Windows”，但不能匹配“2000Windows”中的“Windows”。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">x|y</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">匹配x或y。例如，“z|food”能匹配“z”或“food”或"zood"(此处请谨慎)。“(z|f)ood”则匹配“zood”或“food”。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">[xyz]</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">字符集合。匹配所包含的任意一个字符。例如，“[abc]”可以匹配“plain”中的“a”。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">[^xyz]</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">负值字符集合。匹配未包含的任意字符。例如，“[^abc]”可以匹配“plain”中的“plin”。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">[a-z]</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">字符范围。匹配指定范围内的任意字符。例如，“[a-z]”可以匹配“a”到“z”范围内的任意小写字母字符。</DIV>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">注意:只有连字符在字符组内部时,并且出现在两个字符之间时,才能表示字符的范围; 
+      如果出字符组的开头,则只能表示连字符本身.</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">[^a-z]</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">负值字符范围。匹配任何不在指定范围内的任意字符。例如，“[^a-z]”可以匹配任何不在“a”到“z”范围内的任意字符。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">\b</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">匹配一个单词边界，也就是指单词和空格间的位置（即正则表达式的“匹配”有两种概念，一种是匹配字符，一种是匹配位置，这里的\b就是匹配位置的）。例如，“er\b”可以匹配“never”中的“er”，但不能匹配“verb”中的“er”。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">\B</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">匹配非单词边界。“er\B”能匹配“verb”中的“er”，但不能匹配“never”中的“er”。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">\cx</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">匹配由x指明的控制字符。例如，\cM匹配一个Control-M或回车符。x的值必须为A-Z或a-z之一。否则，将c视为一个原义的“c”字符。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=75 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">\d</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center width=658 align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">匹配一个数字字符。等价于[0-9]。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">\D</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">匹配一个非数字字符。等价于[^0-9]。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">\f</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">匹配一个换页符。等价于\x0c和\cL。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">\n</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">匹配一个换行符。等价于\x0a和\cJ。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">\r</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">匹配一个回车符。等价于\x0d和\cM。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">\s</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">匹配任何不可见字符，包括空格、制表符、换页符等等。等价于[ 
+      \f\n\r\t\v]。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">\S</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">匹配任何可见字符。等价于[^ \f\n\r\t\v]。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">\t</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">匹配一个制表符。等价于\x09和\cI。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">\v</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">匹配一个垂直制表符。等价于\x0b和\cK。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">\w</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">匹配包括下划线的任何单词字符。类似但不等价于“[A-Za-z0-9_]”，这里的"单词"字符使用Unicode字符集。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">\W</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">匹配任何非单词字符。等价于“[^A-Za-z0-9_]”。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">\xn</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">匹配n，其中n为十六进制转义值。十六进制转义值必须为确定的两个数字长。例如，“\x41”匹配“A”。“\x041”则等价于“\x04&amp;1”。正则表达式中可以使用ASCII编码。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">\num</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">匹配num，其中num是一个正整数。对所获取的匹配的引用。例如，“(.)\1”匹配两个连续的相同字符。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">\n</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">标识一个八进制转义值或一个向后引用。如果\n之前至少n个获取的子表达式，则n为向后引用。否则，如果n为八进制数字（0-7），则n为一个八进制转义值。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">\nm</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">标识一个八进制转义值或一个向后引用。如果\nm之前至少有nm个获得子表达式，则nm为向后引用。如果\nm之前至少有n个获取，则n为一个后跟文字m的向后引用。如果前面的条件都不满足，若n和m均为八进制数字（0-7），则\nm将匹配八进制转义值nm。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">\nml</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">如果n为八进制数字（0-7），且m和l均为八进制数字（0-7），则匹配八进制转义值nml。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para label-module="para">\un</DIV></TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>
+      <DIV 
+      style="PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; ZOOM: 1; FONT-FAMILY: 微软雅黑; WORD-WRAP: break-word; HEIGHT: auto; COLOR: rgb(51,51,51); FONT-SIZE: 12px; PADDING-TOP: 0px" 
+      class=para 
+      label-module="para">匹配n，其中n是一个用四个十六进制数字表示的Unicode字符。例如，\u00A9匹配版权符号（&amp;copy;）。</DIV></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>\&lt; \&gt;</TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center       align=left>匹配词（word）的开始（\&lt;）和结束（\&gt;）。例如正则表达式\&lt;the\&gt;能够匹配字符串"for 
+      the wise"中的"the"，但是不能匹配字符串"otherwise"中的"the"。注意：这个元字符不是所有的软件都支持的。</TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>\( \)</TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>将 \( 和 \) 
+      之间的表达式定义为“组”（group），并且将匹配这个表达式的字符保存到一个临时区域（一个正则表达式中最多可以保存9个），它们可以用 \1 到\9 
+      的符号来引用。</TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>|</TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>将两个匹配条件进行逻辑“或”（Or）运算。例如正则表达式(him|her) 匹配"it 
+      belongs to him"和"it belongs to her"，但是不能匹配"it belongs to 
+      them."。注意：这个元字符不是所有的软件都支持的。</TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>+</TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center       align=left>匹配1或多个正好在它之前的那个字符。例如正则表达式9+匹配9、99、999等。注意：这个元字符不是所有的软件都支持的。</TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>?</TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>匹配0或1个正好在它之前的那个字符。注意：这个元字符不是所有的软件都支持的。</TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>{i} {i,j}</TD>
+    <TD     style="BORDER-BOTTOM: rgb(230,230,230) 1px solid; BORDER-LEFT: rgb(230,230,230) 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 22px; MARGIN: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; HEIGHT: 22px; FONT-SIZE: 12px; BORDER-TOP: rgb(230,230,230) 1px solid; BORDER-RIGHT: rgb(230,230,230) 1px solid; PADDING-TOP: 2px"     vAlign=center align=left>匹配指定数目的字符，这些字符是在它之前的表达式定义的。例如正则表达式A[0-9]{3} 
+      能够匹配字符"A"后面跟着正好3个数字字符的串，例如A123、A348等，但是不匹配A1234。而正则表达式[0-9]{4,6} 
+      匹配连续的任意4个、5个或者6个数字</TD></TR></TABLE></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2014. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
+</body>
+</html>

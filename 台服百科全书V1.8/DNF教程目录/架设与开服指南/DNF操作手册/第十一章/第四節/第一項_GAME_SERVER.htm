@@ -1,0 +1,591 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>第一項 GAME SERVER</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+
+
+
+<style>
+html,div { margin: 0; padding: 0;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
+}
+
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
+}
+
+#winchm_template_top{
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #585858;
+}
+
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
+}
+
+#winchm_template_content{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #B1CEFE;
+	border-top-style: solid;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
+	text-align: left;
+}
+
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+@media print
+{
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
+#winchm_template_button{
+visibility:hidden;
+}
+}
+
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
+</style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+
+
+
+
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="../第四節_SERVER配置的環境CFG檔案.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../../../../template2/btn_prev_n.gif" border="0"></a><A href="第二項_APP_SERVER.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../../../../template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation"><a href="index.html">Help</a> &gt; 
+<A href="../../DNF操作手册.htm">DNF操作手册</A> &gt; <A href="../../../../../$$unsavedpage21.htm">第十一章 系統配置方式說明</A> &gt; <A href="../第四節_SERVER配置的環境CFG檔案.htm">第四節 SERVER配置的環境CFG檔案</A> &gt; </div>
+	<div id="winchm_template_title">第一項 GAME SERVER</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content">
+<H3 
+style="BORDER-BOTTOM: windowtext 0.5pt dotted; TEXT-ALIGN: center; PADDING-BOTTOM: 1pt; LINE-HEIGHT: 16px; WIDOWS: 1; TEXT-TRANSFORM: none; FONT-VARIANT: normal; FONT-STYLE: normal; MARGIN-TOP: 15pt; TEXT-INDENT: -28.35pt; PADDING-LEFT: 0pt; LETTER-SPACING: normal; PADDING-RIGHT: 0pt; FONT-FAMILY: 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 10pt; COLOR: rgb(0,0,0); MARGIN-LEFT: 70.9pt; FONT-SIZE: 12pt; BORDER-TOP: windowtext 0.5pt dotted; WORD-SPACING: 0px; PADDING-TOP: 1pt; -webkit-text-stroke-width: 0px"><SPAN 
+style="TEXT-TRANSFORM: uppercase; FONT-FAMILY: 宋体; COLOR: rgb(98,36,35); FONT-SIZE: 12pt">第一項</SPAN><SPAN 
+style="TEXT-TRANSFORM: uppercase; FONT-FAMILY: PMingLiU; COLOR: rgb(98,36,35); FONT-SIZE: 12pt">&nbsp;GAME&nbsp;SERVER</SPAN><SPAN 
+style="TEXT-TRANSFORM: uppercase; FONT-FAMILY: Cambria; COLOR: rgb(98,36,35); FONT-SIZE: 12pt"><?xml:namespace 
+prefix = o /><o:p></o:p></SPAN></H3>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; LETTER-SPACING: normal; FONT: medium/13pt 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 7.5pt; BACKGROUND: rgb(255,255,255); COLOR: rgb(0,0,0); WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN 
+style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 12pt; FONT-WEIGHT: bold">df</SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 12pt; FONT-WEIGHT: bold">_game_r</SPAN><SPAN 
+style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 12pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: -18pt; LETTER-SPACING: normal; FONT: medium/13pt 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 7.5pt; BACKGROUND: rgb(255,255,255); COLOR: rgb(0,0,0); MARGIN-LEFT: 18pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN style="FONT-FAMILY: Symbol; FONT-SIZE: 11pt">·</SPAN><SPAN 
+style="FONT-FAMILY: Symbol; FONT-SIZE: 11pt"> </SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">通訊錄&nbsp;/&nbsp;檔案位置結構</SPAN><SPAN 
+style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; WIDTH: 533.8pt; LETTER-SPACING: normal; BORDER-COLLAPSE: collapse; FONT-FAMILY: 'Times New Roman'; MARGIN-LEFT: 0.15pt; FONT-SIZE: 10pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormalTable>
+  
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 142.8pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=190>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">目錄&nbsp;(檔案)&nbsp;名稱&nbsp;(full&nbsp;path)</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 37.05pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=49>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">區分</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 174.1pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=232>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">說明</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 87.6pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=116>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">擁有者&nbsp;(所屬團隊)</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 46.9pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=62>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">權限設置</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 45.35pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=60>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt; FONT-WEIGHT: bold">參考事項</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 142.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=190>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/home/neople/game/</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 37.05pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=49>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">通訊錄</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 174.1pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=232>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">game&nbsp;server&nbsp;&nbsp;base&nbsp;通訊錄</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 87.6pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=116>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">neople(neople)</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 46.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=62>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">0755</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 45.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=60>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 142.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=190>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/home/neople/game/cfg</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 37.05pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=49>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">通訊錄</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 174.1pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=232>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">game&nbsp;server&nbsp;程式的configuration&nbsp;&nbsp;檔案通訊錄</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 87.6pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=116>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">neople(neople)</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 46.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=62>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">0755</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 45.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=60>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 142.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=190>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/home/neople/game/pid</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 37.05pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=49>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">通訊錄</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 174.1pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=232>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">game&nbsp;server&nbsp;程式的&nbsp;process&nbsp;id&nbsp;紀錄通訊錄</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 87.6pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=116>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">neople(neople)</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 46.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=62>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">0755</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 45.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=60>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 142.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=190>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/home/neople/game/log</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 37.05pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=49>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">通訊錄</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 174.1pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=232>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">game&nbsp;server程式的log&nbsp;紀錄通訊錄</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 87.6pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=116>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">neople(neople)</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 46.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=62>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">0755</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 45.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=60>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 142.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=190>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/home/neople/game/Script.pvf</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 37.05pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=49>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">檔案</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 174.1pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=232>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;遊戲劇情檔案</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 87.6pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=116>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">neople(neople)</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 46.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=62>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">0755</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 45.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=60>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 142.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=190>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/home/neople/game/df_game_r</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 37.05pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=49>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">檔案</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 174.1pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=232>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;game&nbsp;server&nbsp;二元檔案</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 87.6pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=116>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">neople(neople)</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 46.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=62>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">0755</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 45.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=60>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 142.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=190>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/home/neople/game/publickey.pem</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 37.05pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=49>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">檔案</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 174.1pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=232>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">啟動SERVER時需要的認證鍵</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 87.6pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=116>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">neople(neople)</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 46.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=62>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">0755</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 45.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=60>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 142.8pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=190>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">/home/neople/game/server_dnf.str</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 37.05pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=49>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;檔案</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 174.1pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=232>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">劇情他國語言支援</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 87.6pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=116>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">neople(neople)</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 46.9pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=62>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">0755</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0pt; WIDTH: 45.35pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=60>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">&nbsp;</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR></TABLE>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: -18pt; LETTER-SPACING: normal; FONT: medium/13pt 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 7.5pt; BACKGROUND: rgb(255,255,255); COLOR: rgb(0,0,0); MARGIN-LEFT: 18pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN style="FONT-FAMILY: Symbol; FONT-SIZE: 11pt">·</SPAN><SPAN 
+style="FONT-FAMILY: Symbol; FONT-SIZE: 11pt"> </SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">環境設定檔案&nbsp;(/home/neople/game/cfg&nbsp;中&nbsp;"server名編號".cfg&nbsp;中)cain01.cfg)&nbsp;儲存.</SPAN><SPAN 
+style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; WIDTH: 435.95pt; LETTER-SPACING: normal; BORDER-COLLAPSE: collapse; FONT-FAMILY: 'Times New Roman'; MARGIN-LEFT: 0.15pt; FONT-SIZE: 10pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormalTable>
+  
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 435.95pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=581>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(255,0,0); FONT-SIZE: 10pt; FONT-WEIGHT: bold">下列為現在套用的server設定檔案,隨時可以變更&nbsp;.</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P></TD></TR>
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 435.95pt; PADDING-RIGHT: 0pt; BORDER-TOP-STYLE: none; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=581>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">gc_no&nbsp;=&nbsp;1010&nbsp;&nbsp;#&nbsp;遊戲SERVER分流(頻道)&nbsp;server_type&nbsp;=&nbsp;0&nbsp;channel_no&nbsp;=&nbsp;10&nbsp;&nbsp;#&nbsp;分流(頻道)編號&nbsp;channel_name&nbsp;=&nbsp;ch.10#&nbsp;分流(頻道)名稱(在遊戲中顯示)&nbsp;ip&nbsp;=&nbsp;203.69.93.2#&nbsp;遊戲SERVER&nbsp;&nbsp;IP&nbsp;tcp_port&nbsp;=&nbsp;10012&nbsp;#&nbsp;game&nbsp;server使用的&nbsp;TCP&nbsp;port&nbsp;udp_port&nbsp;=&nbsp;11012&nbsp;#&nbsp;game&nbsp;server使用的&nbsp;UDP&nbsp;port&nbsp;udp_ip_of_monitor&nbsp;=&nbsp;172.1.2.61#&nbsp;monitor&nbsp;server&nbsp;IP&nbsp;udp_port_of_monitor&nbsp;=&nbsp;30301&nbsp;#&nbsp;monitor&nbsp;server&nbsp;UDP&nbsp;port&nbsp;tcp_port_of_monitor&nbsp;=&nbsp;30301#&nbsp;monitor&nbsp;server&nbsp;TCP&nbsp;&nbsp;port&nbsp;udp_ip_of_doublecheck&nbsp;=&nbsp;172.1.2.51&nbsp;#&nbsp;cut&nbsp;off&nbsp;server設定&nbsp;udp_port_of_doublecheck&nbsp;=&nbsp;30701#&nbsp;cut&nbsp;off&nbsp;&nbsp;server設定&nbsp;udp_ip_of_statistic&nbsp;=&nbsp;172.1.2.61&nbsp;#&nbsp;指標server&nbsp;ip&nbsp;udp_port_of_statistic&nbsp;=&nbsp;30501&nbsp;&nbsp;#&nbsp;指標使用&nbsp;port&nbsp;udp_ip_of_guild&nbsp;=&nbsp;172.1.2.61#&nbsp;公會SERVER&nbsp;IP&nbsp;udp_port_of_guild&nbsp;=&nbsp;30401#&nbsp;公會SERVER&nbsp;UDP&nbsp;PORT&nbsp;tcp_port_of_guild&nbsp;=&nbsp;30401#&nbsp;公會SERVER&nbsp;TCP&nbsp;PORT&nbsp;udp_ip_of_channel&nbsp;=&nbsp;172.1.2.51#分流中繼server&nbsp;IP&nbsp;udp_port_of_channel&nbsp;=&nbsp;7000#分流中繼server使用port&nbsp;tcp_port_of_channel&nbsp;=&nbsp;7000#&nbsp;分流中繼server使用port&nbsp;&nbsp;exchange_server_ip&nbsp;=&nbsp;203.69.93.2&nbsp;#玩家切換分流時使用&nbsp;exchange_server_port&nbsp;=&nbsp;20012&nbsp;#&nbsp;exchange&nbsp;port&nbsp;udp_ip_of_hades&nbsp;=&nbsp;172.1.2.148&nbsp;udp_port_of_hades&nbsp;=&nbsp;31001&nbsp;tcp_port_of_hades&nbsp;=&nbsp;31001&nbsp;auction_server_ip&nbsp;=&nbsp;172.1.2.91&nbsp;auction_server_port&nbsp;=&nbsp;30801&nbsp;//cera_auction_server_ip&nbsp;=&nbsp;172.1.3.4&nbsp;//cera_auction_server_port&nbsp;=&nbsp;31401&nbsp;ipg_ip&nbsp;=&nbsp;61.215.216.233&nbsp;&nbsp;#&nbsp;billing&nbsp;server位置&nbsp;nxj_ipg_ip&nbsp;=&nbsp;61.215.216.233&nbsp;nxj_ipg_port&nbsp;=&nbsp;9006&nbsp;relay_ip&nbsp;=&nbsp;203.69.93.81#&nbsp;relay使用&nbsp;IP&nbsp;relay_tcp_port&nbsp;=&nbsp;7200&nbsp;#&nbsp;relay&nbsp;server使用&nbsp;&nbsp;TCP&nbsp;port&nbsp;relay_udp_port&nbsp;=&nbsp;7200#&nbsp;relay&nbsp;server使用UDP&nbsp;port&nbsp;stun_ip=&nbsp;203.69.93.71&nbsp;&nbsp;#&nbsp;stun&nbsp;ip&nbsp;登錄&nbsp;stun_ip=&nbsp;203.69.93.72&nbsp;&nbsp;#&nbsp;stun&nbsp;ip&nbsp;登錄&nbsp;stun_ip=&nbsp;203.69.93.73&nbsp;&nbsp;#&nbsp;stun&nbsp;ip&nbsp;登錄&nbsp;stun_port=2311&nbsp;#&nbsp;stun&nbsp;使用PORT(必須使用2個以上)&nbsp;stun_port=2312&nbsp;&nbsp;#&nbsp;stun&nbsp;使用PORT&nbsp;(stun&nbsp;Port&nbsp;只使用一個時,client&nbsp;&nbsp;Port&nbsp;無法被傳達)&nbsp;stun_port=2313&nbsp;lls_keys&nbsp;=&nbsp;3240332317335214766634233322344377569687&nbsp;#eth&nbsp;Mac&nbsp;的相關設定</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">–</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">&nbsp;設定皆為neople提供&nbsp;&nbsp;//chatting_server_ip&nbsp;=&nbsp;172.1.3.4&nbsp;//chatting_server_port&nbsp;=&nbsp;40404&nbsp;//social_event_server_ip&nbsp;=&nbsp;172.1.3.4&nbsp;//social_event_server_tcp_port&nbsp;=&nbsp;40405&nbsp;//mobile_server_ip&nbsp;=&nbsp;172.1.3.4&nbsp;//mobile_server_port&nbsp;=&nbsp;30809&nbsp;//community_server_ip&nbsp;=&nbsp;172.1.3.4&nbsp;//community_server_port&nbsp;=&nbsp;39500&nbsp;//nexon_billing_ip&nbsp;=&nbsp;211.218.232.97&nbsp;//nexon_billing_port&nbsp;=&nbsp;36500&nbsp;db_thread_count&nbsp;=&nbsp;3&nbsp;#&nbsp;DB&nbsp;連結數&nbsp;master_db_ip&nbsp;=&nbsp;172.1.2.141&nbsp;master_db_port&nbsp;=&nbsp;3306&nbsp;master_db_acc&nbsp;=&nbsp;taiwan_game&nbsp;master_db_pwd&nbsp;=&nbsp;e57da631f47c906741616e764bfee89568b80c38ec48cad4&nbsp;master_db_name&nbsp;=&nbsp;d_taiwan&nbsp;server_group&nbsp;=&nbsp;1&nbsp;&nbsp;#&nbsp;設定遊戲SERVER組&nbsp;fatigue_time&nbsp;=&nbsp;06&nbsp;&nbsp;#&nbsp;疲勞度重置時間&nbsp;(早上6點)&nbsp;avatar_time&nbsp;=&nbsp;60&nbsp;&nbsp;#&nbsp;不使用&nbsp;max_user_num&nbsp;=&nbsp;600&nbsp;&nbsp;#&nbsp;各分流的玩家數量&nbsp;db_tbl_file&nbsp;=&nbsp;db_info_arad&nbsp;header_classification&nbsp;=&nbsp;0&nbsp;1&nbsp;header_msg_no&nbsp;=&nbsp;5&nbsp;1&nbsp;header_sLength&nbsp;=&nbsp;1&nbsp;4&nbsp;//header_garvage&nbsp;=&nbsp;6&nbsp;1&nbsp;header_checksum&nbsp;=&nbsp;7&nbsp;4&nbsp;header_sequence&nbsp;=&nbsp;11&nbsp;2&nbsp;header_load_interval&nbsp;=&nbsp;10&nbsp;header_mangled_length&nbsp;=&nbsp;13&nbsp;libserverlib_config_name&nbsp;=&nbsp;ServerLab&nbsp;script_dir&nbsp;=&nbsp;./Script/&nbsp;//stand_alone&nbsp;=&nbsp;yes&nbsp;scriptpacks&nbsp;=&nbsp;yes</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR></TABLE>
+<P 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: -18pt; LETTER-SPACING: normal; FONT: medium/13pt 'Times New Roman'; WHITE-SPACE: normal; MARGIN-BOTTOM: 7.5pt; BACKGROUND: rgb(255,255,255); COLOR: rgb(0,0,0); MARGIN-LEFT: 18pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormal><SPAN style="FONT-FAMILY: Symbol; FONT-SIZE: 11pt">·</SPAN><SPAN 
+style="FONT-FAMILY: Symbol; FONT-SIZE: 11pt"> </SPAN><SPAN 
+style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,0,0); FONT-SIZE: 10pt">需要文庫</SPAN><SPAN 
+style="FONT-FAMILY: Arial; COLOR: rgb(0,0,0); FONT-SIZE: 10pt"><o:p></o:p></SPAN></P>
+<TABLE 
+style="WIDOWS: 1; TEXT-TRANSFORM: none; TEXT-INDENT: 0px; WIDTH: 178.2pt; LETTER-SPACING: normal; BORDER-COLLAPSE: collapse; FONT-FAMILY: 'Times New Roman'; MARGIN-LEFT: 0.15pt; FONT-SIZE: 10pt; WORD-SPACING: 0px; -webkit-text-stroke-width: 0px" 
+class=MsoNormalTable>
+  
+  <TR>
+    <TD     style="BORDER-BOTTOM: windowtext 0.75pt solid; BORDER-LEFT: windowtext 0.75pt solid; PADDING-BOTTOM: 0pt; PADDING-LEFT: 0pt; WIDTH: 178.2pt; PADDING-RIGHT: 0pt; BORDER-TOP: windowtext 0.75pt solid; BORDER-RIGHT: windowtext 0.75pt solid; PADDING-TOP: 0pt"     vAlign=top width=237>
+      <P 
+      style="LINE-HEIGHT: 16px; FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 12pt" 
+      class=MsoNormal><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold">MySQL-share-community-5.x.xx.x.x64.rpm&nbsp;&nbsp;/usr/lib/libnxencryption.so&nbsp;(NEOPLE提供)</SPAN><SPAN 
+      style="FONT-FAMILY: PMingLiU; COLOR: rgb(0,51,102); FONT-SIZE: 10pt; FONT-WEIGHT: bold"><o:p></o:p></SPAN></P></TD></TR></TABLE><BR 
+class=Apple-interchange-newline></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2014. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
+</body>
+</html>

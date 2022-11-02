@@ -1,0 +1,220 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>活动开启方法</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+
+
+
+<style>
+html,div { margin: 0; padding: 0;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+	height: 100%;
+}
+
+#winchm_template_button{
+	float: right;
+	width: 93px;
+	top: 7px;
+	position: relative;
+	text-align: right;
+	right: 5px;
+	height: auto;
+}
+
+#winchm_template_top{
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #9B9B9B;
+	background-color: #B1CEFE;
+}
+
+#winchm_template_navigation{
+	margin: 0px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 3px;
+	padding-right: 0px;
+	font-size: 8.5pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #585858;
+}
+
+#winchm_template_title{
+	margin: 0px;
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	padding-right: 0px;
+	font-size: 18px; 
+	font-family: Verdana, Geneva, sans-serif;
+	color: #363636;
+}
+
+#winchm_template_content{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	width: auto  !important;
+	width: 100%;
+}
+
+#winchm_template_footer{
+	border-width: 1px;
+	border-color: #B1CEFE;
+	border-top-style: solid;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	padding-top: 7px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8.5pt;
+	color: #696969;
+	width: auto;
+	text-align: left;
+}
+
+
+#winchm_template_container{
+	margin: 0px;
+	padding: 0px;
+	position: static;
+	padding-bottom: 3px;
+	overflow: auto;
+	background-color: #FFFFFF;
+}
+
+
+@media print
+{
+#winchm_template_container{
+	position: static;	
+	margin: 0px;
+	padding: 5px;
+	
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
+#winchm_template_button{
+visibility:hidden;
+}
+}
+
+#winchm_template_navigation A:link	{text-decoration: none; color:#004080}
+#winchm_template_navigation A:visited  {text-decoration: none; color: #004080}
+#winchm_template_navigation A:active {text-decoration: none; color: #004080 }
+#winchm_template_navigation A:hover {text-decoration: none;color: #0080FF}
+
+A:link	{text-decoration: underline; color:#0033CC}
+A:visited  {text-decoration: underline; color: #0033CC}
+A:active {text-decoration: underline; color: #0033CC }
+A:hover {text-decoration: underline;color: #FF0000;}
+</style>
+<script type="text/javascript">
+function isMobile(){
+Agent = window.navigator.userAgent;
+if (Agent.indexOf("iPhone")>=1 || Agent.indexOf("iPad")>=1 || Agent.indexOf("iPod")>=1 || Agent.indexOf("Android")>=1){
+return true;
+}else{
+return false;	
+}
+
+}
+function d_onresize(){
+if (window.navigator.userAgent.indexOf("MSIE")>=1){
+document.getElementById('winchm_template_container').style.pixelWidth = document.body.offsetWidth - 3;
+document.getElementById('winchm_template_container').style.pixelHeight = document.body.offsetHeight - document.getElementById('winchm_template_top').offsetHeight - 4;
+}
+document.getElementById('winchm_template_container').style.top = document.getElementById('winchm_template_top').offsetHeight + 'px';
+}
+
+function d_onbeforeprint(){
+document.getElementById('winchm_template_container').style.width = 'auto';
+document.getElementById('winchm_template_container').style.height = 'auto';
+}
+
+function d_onafterprint(){
+d_onresize();
+}
+
+if(!isMobile()){
+
+window.onload = d_onresize;
+window.onresize = d_onresize;
+window.onbeforeprint = d_onbeforeprint;
+window.onafterprint = d_onafterprint;
+
+
+
+
+
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="winchm_template_top">
+	<div id="winchm_template_button"><A href="修改D币、金币等相关.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../template2/btn_prev_n.gif" border="0"></a><A href="../架设与开服指南/解析DNF_GM命令如何调试运用.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_navigation"><a href="index.html">Help</a> &gt; 
+<A href="mysql修改.htm">mysql修改</A> &gt; </div>
+	<div id="winchm_template_title">活动开启方法</div>
+</div>
+<div id="winchm_template_container">
+	<div id="winchm_template_content">
+<P>公布一些活动开启方法</P>
+<P>此教程只适合服务端下载大小： 5.2G 的那个</P>
+<P><BR>1) 确保 Navicat 可以连接到192.168.1.160 这个数据库</P>
+<P>2) 192.168.1.200 这个数据库，这个VM可以关闭了</P>
+<P>3)</P>
+<P>连接到 192.168.1.160这个数据库后</P>
+<P>找到: d_taiwan 这个数据库, 然后找到：dnf_event_log 这个表，然后按照以下输入:</P>
+<P><BR>1::经验值倍率</P>
+<P>1 0 3 500 0 1 0 0 0 0</P>
+<P><BR>（说明： 第一个1， 是log_id, 就是序号,不要重复就可以,随便你写什么,一般都是按照顺序往下写, 
+1,2,3,4,5,6,7,8,9,10,11,...... 这样; 然后500就是倍率, 500等于5倍, 
+因为服务器里面的算法是以百分比来算.所以要除以100. 原本的是1000,其实只是10倍经验而已）</P>
+<P><BR>2::修改最大疲劳</P>
+<P>2 0 2 600 0 1 0 0 0 0</P>
+<P>(说明：第一个2， 是log_id, 600代表6倍，进游戏看疲劳，就是 6*156=936)</P>
+<P><BR>3::修改无限疲劳</P>
+<P>3 0 1 1 0 1 0 0 0 0</P>
+<P>(说明：第一个3， 是log_id,)</P>
+<P><BR>4::通过消耗疲劳获得BUFF</P>
+<P>6 0 43 1 0 1 0 0 0 0</P>
+<P><BR>(说明：第一个6， 是log_id,)</P>
+<P><BR>5::成长帮助活动1和成长帮助活动2</P>
+<P><BR>7 0 158 1 0 1 0 0 0 0</P>
+<P>8 0 163 1 0 1 0 0 0 0</P>
+<P><BR>伙伴们，我所知道的开启活动方式就这些了.</P>
+<P>目前正在研究其他活动开启方式，有知道的，请共享一些。</P>
+<P>谢谢</P>
+<P><FONT style="BACKGROUND-COLOR: #cce8cf"></FONT>&nbsp;</P></div>	
+	<div id="winchm_template_footer">Copyright &copy; 2014. All rights 
+reserved. (To change the copyright info, just edit it in template.)</div>
+</div>
+
+</body>
+</html>
