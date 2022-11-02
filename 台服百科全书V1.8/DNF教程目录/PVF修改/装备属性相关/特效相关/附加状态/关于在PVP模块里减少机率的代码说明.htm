@@ -2,7 +2,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>������PVPģ������ٻ��ʵĴ���˵��</title>
+<title>关于在PVP模块里减少机率的代码说明</title>
 <meta name="GENERATOR" content="WinCHM">
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <style>
@@ -177,27 +177,27 @@ window.onafterprint = d_onafterprint;
 <body>
 
 <div id="winchm_template_top">
-	<div id="winchm_template_button"><A href="../�������/����then����2.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../../../../template2/btn_prev_n.gif" border="0"></a><A href="../../ʱװ���/ʱװʱЧ.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../../../../template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_button"><A href="../触发相关/多重then案例2.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../../../../template2/btn_prev_n.gif" border="0"></a><A href="../../时装相关/时装时效.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../../../../template2/btn_next_n.gif" border="0"></a></div>
 	<div id="winchm_template_navigation"><a href="index.html">Help</a> &gt; 
-<A href="../../../PVF�޸�.htm">PVF�޸�</A> &gt; <A href="../../../װ���޸ĺϼ�.htm">װ���޸ĺϼ�</A> &gt; <A href="../../װ���������.htm">װ���������</A> &gt; <A href="../��Ч���.htm">��Ч���</A> &gt; </div>
-	<div id="winchm_template_title">������PVPģ������ٻ��ʵĴ���˵��</div>
+<A href="../../../PVF修改.htm">PVF修改</A> &gt; <A href="../../../装备修改合集.htm">装备修改合集</A> &gt; <A href="../../装备属性相关.htm">装备属性相关</A> &gt; <A href="../特效相关.htm">特效相关</A> &gt; </div>
+	<div id="winchm_template_title">关于在PVP模块里减少机率的代码说明</div>
 </div>
 <div id="winchm_template_container">
 	<div id="winchm_template_content">
 <UL>
-  <LI>[(reduce) ��duration�� to human armor at ��pvp�� module] 
+  <LI>[(reduce) （duration） to human armor at （pvp） module] 
   <LI>        
 <DIV>50</DIV></LI></UL>        
-<P>ԭ�룺���������PVPģ���м��ٳ���ʱ��</P>        
-<P>˵������ԭ���Ĵ�����ֵΪ���������ٷֱȼ��١�����������г���ʱ��Ϊ2000����Ϊ����2000-2000/100*50�����㣬�ó���PVPģʽ��ͼ�³���ʱ��Ϊ1000���롣</P>        
-<P>����<FONT color=#ff0000><STRONG>�²�</STRONG></FONT>�������ڵ����ݾ��пɱ��ԣ��磺</P>
+<P>原译：人类防具在PVP模块中减少持续时间</P>        
+<P>说明：以原本的代码数值为基础，按百分比减少。如下面代码中持续时间为2000毫秒为例，2000-2000/100*50来计算，得出在PVP模式地图下持续时间为1000毫秒。</P>        
+<P>分析<FONT color=#ff0000><STRONG>猜测</STRONG></FONT>：括号内的内容具有可变性，如：</P>
 <OL>
   <LI>        
-<DIV>��һ�����ż��ٿ��Ի�������<FONT color=#ff0000>increase</FONT>��</DIV>
+<DIV>第一个括号减少可以换成增加<FONT color=#ff0000>increase</FONT>。</DIV>
   <LI>        
-<DIV>�ڶ������ų���ʱ����Ի��ɻ��ʣ�Ҳ���Ի����쳣״̬�����Եȡ�</DIV>
+<DIV>第二个括号持续时间可以换成机率，也可以换成异常状态或属性等。</DIV>
   <LI>        
-<DIV>����������ģ����Ի��� ��ͨ��ͼ �� ����֮�� ������ģ�顣</DIV></LI></OL>        
+<DIV>第三个括号模块可以换成 普通地图 或 死亡之塔 等其他模块。</DIV></LI></OL>        
 <P>[then]</P>
 <P>[target] <BR>'enemy' -1 <BR>[reduce duration to human armor at pvp module] 
 <BR>50 <BR>[duration] <BR>2000 <BR>[reduce probability to human armor at pvp 

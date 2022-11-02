@@ -2,7 +2,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>����ն������᰽���</title>
+<title>后跳斩触发西岚剑气</title>
 <meta name="GENERATOR" content="WinCHM">
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <style>
@@ -177,34 +177,34 @@ window.onafterprint = d_onafterprint;
 <body>
 
 <div id="winchm_template_top">
-	<div id="winchm_template_button"><A href="����GM���߿�����.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../template2/btn_prev_n.gif" border="0"></a><A href="../new/�������/ֻ��PVF���ڰ�����ü��ܱ����һ�����ܣ�ȫ����˫����.html" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_button"><A href="利用GM工具卡技能.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../template2/btn_prev_n.gif" border="0"></a><A href="../new/技能相关/只用PVF大众版把无用技能变成另一个技能（全鬼开双刀）.html" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../template2/btn_next_n.gif" border="0"></a></div>
 	<div id="winchm_template_navigation"><a href="index.html">Help</a> &gt; 
-<A href="PVF�޸�.htm">PVF�޸�</A> &gt; <A href="../../$$unsavedpage11.htm">�������</A> &gt; </div>
-	<div id="winchm_template_title">����ն������᰽���</div>
+<A href="PVF修改.htm">PVF修改</A> &gt; <A href="../../$$unsavedpage11.htm">技能相关</A> &gt; </div>
+	<div id="winchm_template_title">后跳斩触发西岚剑气</div>
 </div>
 <div id="winchm_template_container">
 	<div id="winchm_template_content">
-<P>����by����ɫ��_</P>
-<P>�����о���ᰵĴ��뷢�ֹؼ����ļ���key����ļ���</P>
-<P><IMG alt="" src="../../images/����ն������᰽���01.jpg"></P>
+<P>——by：黄色哥_</P>
+<P>首先研究西岚的代码发现关键的文件在key这个文件夹</P>
+<P><IMG alt="" src="../../images/后跳斩触发西岚剑气01.jpg"></P>
 <P>&nbsp;</P>
-<P>�򿪷����˺ܶ�.key�ļ�����quadruple_backstepcutter.key��������</P>
-<P><IMG alt="" src="../../images/����ն������᰽���02.jpg"></P>
-<P>����������Ч���룬���Է���20065��ʽ��������<BR>�������20065��������滻��ᷢ�֣��������ᶯ��<BR>&nbsp;�����˺ܶ�ζ�û�취���������⣬�����ڹ��׽���Ч�������淢����һЩϸ��<BR>8085 
+<P>打开发现了很多.key文件比如quadruple_backstepcutter.key打开它发现</P>
+<P><IMG alt="" src="../../images/后跳斩触发西岚剑气02.jpg"></P>
+<P>里面真是特效代码，可以发现20065正式剑气代码<BR>但是你把20065这个代码替换后会发现，剑气不会动，<BR>&nbsp;尝试了很多次都没办法解决这个问题，终于在光炎剑特效代码上面发现了一些细节<BR>8085 
 0 30 0 0 0"draongheadenergyball.ptl" 
-���ֺ�����һ����draongheadenergyball.ptl�ļ���������ǹؼ�<BR>��key�ļ����淢��[PARTICLE 
-FILENAME]<BR>'key/grandwave.ptl' �պ�Ҳ��һ��ptl�ļ����򿪷���������Ǽ�¼�ƶ�������</P>
-<P><IMG alt="" src="../../images/����ն������᰽���03.jpg"></P>
-<P>�������ý����ƶ��͵ý��ptl����ļ�<BR>����Ҿ��뵽��һ���취���Ǿ����滻���е�ptl�ļ����Ұѹ��׽���Ч�����ļ�draongheadenergyball.ptl�������滻��grandwave.ptl���ڰѴ���ĳ�20065 
-0 0 0 0 0 'DragonHeadEnergyBall.ptl'<BR>д�룬���Է������ڳɹ���</P>
-<P><BR>���Ŵ����ÿ����˰ɣ��ܽ����֪����������󣬻���֪��ptl�ļ������ù��׽���ptl�滻�ģ�����Ҳ���Ի��������滻����һ�������������ͬ������ҿ���ȥ��һ��</P>
+发现后面有一个。draongheadenergyball.ptl文件，这个就是关键<BR>在key文件里面发现[PARTICLE 
+FILENAME]<BR>'key/grandwave.ptl' 刚好也有一个ptl文件，打开发现里面就是记录移动的数据</P>
+<P><IMG alt="" src="../../images/后跳斩触发西岚剑气03.jpg"></P>
+<P>所以想让剑气移动就得解决ptl这个文件<BR>因此我就想到了一个办法，那就是替换现有的ptl文件，我把光炎剑特效配置文件draongheadenergyball.ptl的内容替换成grandwave.ptl。在把代码改成20065 
+0 0 0 0 0 'DragonHeadEnergyBall.ptl'<BR>写入，测试发现终于成功了</P>
+<P><BR>相信大家因该看懂了吧？总结就是知道剑气代码后，还得知道ptl文件，我用光炎剑的ptl替换的，你们也可以换其他的替换。举一反三，阿甘左的同理，大家可以去试一试</P>
 <P>[if]</P>
 <P><BR>[use skill]<BR>'swordman' 49<BR>[/use skill]</P>
 <P><BR>[cooltime]<BR>100<BR>[/if]</P>
 <P><BR>[then]</P>
 <P><BR>[target]<BR>'all enemy' -1<BR>[passive 
 object]<BR>20065 0 0 0 0 0 'Straight3.ptl'<BR>[/passive object]</P>
-<P><BR>[/then]<BR>�������룬������㲦��ֱ�ӾͿ��Ե����Դ���Straight3.ptl�ļ��ˣ������滻ʲô��</P></div>	
+<P><BR>[/then]<BR>完整代码，经大神点拨，直接就可以调用自带的Straight3.ptl文件了，不用替换什么的</P></div>	
 	<div id="winchm_template_footer">Copyright &copy; 2014. All rights 
 reserved. (To change the copyright info, just edit it in template.)</div>
 </div>

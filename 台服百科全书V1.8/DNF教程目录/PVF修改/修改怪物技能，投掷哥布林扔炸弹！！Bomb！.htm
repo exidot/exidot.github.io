@@ -2,7 +2,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>�޸Ĺ��＼�ܣ�Ͷ���粼����ը������Bomb��</title>
+<title>修改怪物技能，投掷哥布林扔炸弹！！Bomb！</title>
 <meta name="GENERATOR" content="WinCHM">
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <style>
@@ -177,34 +177,34 @@ window.onafterprint = d_onafterprint;
 <body>
 
 <div id="winchm_template_top">
-	<div id="winchm_template_button"><A href="�粼���ٻ����ֹ���.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../template2/btn_prev_n.gif" border="0"></a><A href="ȫ�����.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_button"><A href="哥布林召唤各种怪物.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../template2/btn_prev_n.gif" border="0"></a><A href="全局相关.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../template2/btn_next_n.gif" border="0"></a></div>
 	<div id="winchm_template_navigation"><a href="index.html">Help</a> &gt; 
-<A href="PVF�޸�.htm">PVF�޸�</A> &gt; <A href="�������.htm">�������</A> &gt; </div>
-	<div id="winchm_template_title">�޸Ĺ��＼�ܣ�Ͷ���粼����ը������Bomb��</div>
+<A href="PVF修改.htm">PVF修改</A> &gt; <A href="怪物相关.htm">怪物相关</A> &gt; </div>
+	<div id="winchm_template_title">修改怪物技能，投掷哥布林扔炸弹！！Bomb！</div>
 </div>
 <div id="winchm_template_container">
 	<div id="winchm_template_content">
-<P><IMG alt="" src="../../images/Ͷ���粼����ը��01.jpg">&nbsp; </P>
-<P>�粼�ֶ��߹�bossը�������������²���<BR>�ҵ�������������һС��<BR>�ڴ˸�л����Ĵ��񣬶�лָ���Խ�<BR>¥�·Ž̳̣�����и��õĵ��ӷ������������˶�������</P>
-<P>ը�����Կ����޸ĵģ�����ը�����о��룬����ʱ�䣬�����ٶȣ��˺�����ը��Χ�����޸�</P>
-<P><IMG alt="" src="../../images/Ͷ���粼����ը��02.jpg"></P>
-<P><BR>��Ͷ���粼�ֵ��ļ�</P>
+<P><IMG alt="" src="../../images/投掷哥布林扔炸弹01.jpg">&nbsp; </P>
+<P>哥布林丢走狗boss炸弹，就问你们怕不怕<BR>我的梦想又迈出了一小步<BR>在此感谢吧务的大神，多谢指点迷津！<BR>楼下放教程，大家有更好的点子分享分享哈，人多力量大</P>
+<P>炸弹属性可以修改的，比如炸弹飞行距离，持续时间，飞行速度，伤害，爆炸范围都能修改</P>
+<P><IMG alt="" src="../../images/投掷哥布林扔炸弹02.jpg"></P>
+<P><BR>打开投掷哥布林的文件</P>
 <P>[throw attack] <BR>'[attack index]' 0 '[passive object number]' 1 '[passive 
 object filename]' 'Particle/ThrowStone.ptl' '[object type]' 1 '<BR>[passive 
 object index]' 30001 '[power]' 0 '[throw frame]' 2 '[passive object start x 
 cood]' 20 '[passive object start y cood]' 0 '<BR>[passive object start z cood]' 
 60 '[attack number]' 1 '[throw sound]' 'THROW_STONE' <BR>[/throw attack] 
-<BR>�ҵ���δ��룬Ͷ��������30001�����������Ͷ��ʯͷ�Ĵ��룬passive object filenameĿ���ļ�����ThrowStone.ptl 
-����ļ�����Ͷ�����ܣ���Ҫ���滻Ϊ�߹���Ͷ������</P>
-<P><IMG alt="" src="../../images/Ͷ���粼����ը��03.jpg"></P>
-<P>���������8225�Ĵ�������߹���ը�������ˣ���30001��Ϊ8225<BR>������Ҫ�����ǣ��ҵ��߹�Ͷ��ը���ļ��ܣ�Ҳ����.ptl�ļ����߹������ļ��������ô��8225�������</P>
-<P>&nbsp;<IMG alt="" src="../../images/Ͷ���粼����ը��04.jpg">����8225</P>
+<BR>找到这段代码，投掷攻击，30001，这个数字是投掷石头的代码，passive object filename目标文件名，ThrowStone.ptl 
+这个文件就是投掷技能，需要把替换为走狗的投掷技能</P>
+<P><IMG alt="" src="../../images/投掷哥布林扔炸弹03.jpg"></P>
+<P>打开这个看到8225的代码就是走狗的炸弹代码了，把30001改为8225<BR>接下来要做的是，找到走狗投掷炸弹的技能，也就是.ptl文件在走狗怪物文件里，至于怎么找8225这个代码</P>
+<P>&nbsp;<IMG alt="" src="../../images/投掷哥布林扔炸弹04.jpg">搜索8225</P>
 <P>8225 'ActionObject/Monster/Jeff/Jeff_FrontMissile.obj' 
-<BR>Jeff_FrontMissile.obj' ��ס��Ӣ��</P>
-<P><IMG alt="" src="../../images/Ͷ���粼����ը��05.jpg"></P>
-<P>���.ptl����Ͷ��ը���ļ��ܣ���㸴�Ƶ�һ���ط�������Ϊ throwstone Ȼ�󸲸ǵ�����λ��ȥ</P>
-<P><IMG alt="" src="../../images/Ͷ���粼����ը��06.jpg"></P>
-<P>Ȼ��д�����ptl�������<BR>Ͷ���粼�ֵ��ļ�ҲҪд�룬��Ϊ����30001��Ϊ��8225<BR>�˺���ô�޸ģ�<BR>obj�ļ��Ӣ�Ŀ������ٶȷ���ɡ�</P>
+<BR>Jeff_FrontMissile.obj' 记住段英文</P>
+<P><IMG alt="" src="../../images/投掷哥布林扔炸弹05.jpg"></P>
+<P>这个.ptl就是投掷炸弹的技能，随便复制到一个地方重命名为 throwstone 然后覆盖到以下位置去</P>
+<P><IMG alt="" src="../../images/投掷哥布林扔炸弹06.jpg"></P>
+<P>然后写入这个ptl就完成了<BR>投掷哥布林的文件也要写入，因为代码30001改为了8225<BR>伤害怎么修改？<BR>obj文件里，英文看不懂百度翻译吧。</P>
 <P>&nbsp;</P></div>	
 	<div id="winchm_template_footer">Copyright &copy; 2014. All rights 
 reserved. (To change the copyright info, just edit it in template.)</div>

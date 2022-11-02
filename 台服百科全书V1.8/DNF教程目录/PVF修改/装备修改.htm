@@ -2,7 +2,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>װ���޸�</title>
+<title>装备修改</title>
 <meta name="GENERATOR" content="WinCHM">
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <style>
@@ -177,36 +177,36 @@ window.onafterprint = d_onafterprint;
 <body>
 
 <div id="winchm_template_top">
-	<div id="winchm_template_button"><A href="�����޸�.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../template2/btn_prev_n.gif" border="0"></a><A href="��ͼ���.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_button"><A href="城镇修改.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../template2/btn_prev_n.gif" border="0"></a><A href="地图相关.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../template2/btn_next_n.gif" border="0"></a></div>
 	<div id="winchm_template_navigation"><a href="index.html">Help</a> &gt; 
-<A href="PVF�޸�.htm">PVF�޸�</A> &gt; <A href="PVF�޸��ĵ�.htm">PVF�޸��ĵ�</A> &gt; </div>
-	<div id="winchm_template_title">װ���޸�</div>
+<A href="PVF修改.htm">PVF修改</A> &gt; <A href="PVF修改心得.htm">PVF修改心得</A> &gt; </div>
+	<div id="winchm_template_title">装备修改</div>
 </div>
 <div id="winchm_template_container">
 	<div id="winchm_template_content">
-<P><IMG alt="" src="../../images/װ���޸�01.jpg"></P>
-<P>���֣������޸ģ�equipment�ļ����£�equipment.kor.str���޸�����Ϳ��ԡ��������漰��һ���ļ���str�ļ����ҵ�������string�ļ������Կ��������ַ����������ã����Կ������ֶ����ķ���</P>
-<P>װ�������޸ģ���equipment�ļ��У�character��ʾ���monster��ʾ���creature��ʾ����<BR>��character�ļ��У�SWORDMANΪ����ʿ���򿪺󿴵�avatar-ʱװ��growtype-ְҵ������weapon-����<BR>��weapon�� 
-�������ļ������δ����⽣���������޽���̫�����̽�<BR>��equ�ļ��������޸ĸ���װ�����ݡ�<BR>���һ�����ֵ�޸Ĳ����ˣ��Ἰ�����õĶ���<BR>1.���Թ�����<BR>[elemental 
+<P><IMG alt="" src="../../images/装备修改01.jpg"></P>
+<P>名字，描述修改：equipment文件夹下，equipment.kor.str，修改这个就可以。这里又涉及到一个文件，str文件，我的理解是string文件，可以看到各种字符串，很有用，可以看到各种东西的翻译</P>
+<P>装备数据修改：打开equipment文件夹，character表示人物，monster表示怪物，creature表示宠物<BR>打开character文件夹，SWORDMAN为鬼剑士，打开后看到avatar-时装，growtype-职业特征，weapon-武器<BR>打开weapon， 
+看到的文件夹依次代表光剑，钝器，巨剑，太刀，短剑<BR>打开equ文件，可以修改各种装备数据。<BR>这里，一般的数值修改不提了，提几点有用的东西<BR>1.属性攻击：<BR>[elemental 
 property]<BR>'[light 
-element]'<BR>���������ԣ����������޷Ǿ���DARK��ice��fire<BR>2.��������<BR>[skill up] 
-�������ܵȼ�����<BR>[skill data up] 
-�������ܵ���������޸ģ�GSD�ľ���������֮���Կ���ʵ�����޾��Ѿ��ǿ�������޸���δ����Ч����ʵ�ͺ��޸ļ���Ч��һ����������<BR>3.�����˺�����<BR></P>
+element]'<BR>代表光属性，其他属性无非就是DARK，ice，fire<BR>2.技能属性<BR>[skill up] 
+代表技能等级上升<BR>[skill data up] 
+代表技能的相关属性修改，GSD的究极波动刃之所以可以实现无限觉醒就是靠这个，修改这段代码的效果其实就和修改技能效果一样。。。。<BR>3.附加伤害属性<BR></P>
 <P>[if]</P>
 <P><BR>[attack success]<BR>1<BR>[/if]</P>
 <P><BR>[then]</P>
 <P><BR>[target]<BR>'enemy' -1<BR>[add absolute 
 damage]<BR>'all' '%' 100<BR>[/then]</P>
-<P>���������100%�˺����������ý��ˣ��Ѿ��кܶ�������ˡ�<BR>4.������Ч<BR>��ʵ�ܶ���Ч����ͨ��<STRONG><FONT color=#ff0000>passiveobject</FONT></STRONG>��ʵ�֣�����˵�����Ѿ��������ˣ����ǿ��Դ�<STRONG><FONT color=#ff0000>passiveobject</FONT></STRONG>����ļ��У��ο�������б���ʵ�ֺܶ���Ϸ��װ��û�е����ԣ���ֹ����ֲ���������������passiveobject�б����Ч��������˵ʩ�ż���ʱ���н���Ľ���������ֱ�ӳ��־��Ѷ�����ʵ�֡�<BR>��Ȼ�ˣ��������ʻ������ߵġ��������Բ����Ҹ�<BR></P>
-<P>�ܽ����㣬����������Բο���������װ����д������<STRONG><FONT color=#ff0000>������Ч�Ĵ���ο�passiveobject</FONT></STRONG>��<BR>���⣬���������£�<STRONG><FONT color=#ff0000>�����ǳ��е��£���ʱ��������Ҫ����</FONT></STRONG>�����Ǹ���ϰ�ߡ���</P>
-<P>����˵�����Լ��Ĵ���Ѱ�ҷ�����GM�������Դ��Ĺ��������б���̨�������б�������script�ļ������Դ��ĸ���lst,string�ļ���һ����˵�����⼸���㹻�ˡ�������</P>
-<P>�����޸�<BR>����һЩ����ߵ���ʧ����Щ�����ǻ���ߣ��������µ�¼��Ϸ����ʧ�ˣ�������Щ���ߣ����԰�<BR>[expiration 
-date]<BR>1294930800<BR>��δ������ֵ��Ϊ0�Ϳ���<BR></P>
-<P>���˵�¸���ɣ���ʵ��ƪ������Ķ��������ѣ��ؼ�����ϲ��ϻ�ʱ��ȥ�о����ˡ���ʵ���Ƕ�û�б�Ҫȥ�о����ֶ������ⲻ�����������ְ��ˡ�����˵�����ö�Ҳûʲô�˲���ʲô������Ҳûʲô�ò����ġ��ؼ�����Щ�˲�Ҫ�Լ����ϻ�ʱ�仹�Ա��˸���Ҫ����ֻ����Ϸ�����Ǹ���û��Ҫ���⻨̫��ʱ�䣬������Щ�˲����о���Щ��ȫ�������⣬���Ǽ�Ȼ��ѡ���˲��о��ǾͲ�Ҫ���������޸��ˣ���Ҫһ�������޸ģ�һ�������Ÿ������֡�<BR>������˵���޸ĵ���Ȥ�������Լ�����DIY��������Ϊ���Լ����֣����Լ��о����Ÿе���Ȥ����Ȼ�����˿��Բ���ô�룬�Ͼ�ÿ���˶��ǲ�ͬ�ġ�<BR>�����������ӣ���ҲҪæ�����ˣ�����Ҳûʱ���о���Щ�����ˡ����ǵ������ҿ��ܽ������Ҳ����ûʱ����ֻ��˵�����ɣ��Ͼ�ÿ���˶����Լ�Ҫæ���£�������ͣ������Ϸ</P>
-<P>��Ϊ�����޸�û�н�ͼ�����Կ�����Щ���޸�ʱ������һЩ���⣬��������ʱ���ȶ�˼�����ú�˼������˵�Ļ������ṩ����Ҫ��һ��˼·��һ��˼ά��ʽ����������Ҫʵ����Щ���ܣ���Щ���ܿ����漰����Щ�ļ����ļ�֮��������Щ��ϵ���������е�����չ�����������룬��ѧ��ο������ļ���д����������ʱ�����ǲ����ļ�֮��Ķ�Ӧ��ϵ����û������ʲô�����߶���ʲô��<BR>Ϊ�˷����ҿ����ҵ����⣬���ϴ���һЩ�޸�����ļ�����Ҫ�ǳ����˿��Զ��������޸ĵ��ļ�����<BR><A 
-href="http://pan.baidu.com/s/1pJ7pLlLtimegaterequiem">http://pan.baidu.com/s/1pJ7pLlLtimegaterequiem</A>��</P>
+<P>这代表附加100%伤害，具体懒得讲了，已经有很多人提过了。<BR>4.各种特效<BR>其实很多特效都是通过<STRONG><FONT color=#ff0000>passiveobject</FONT></STRONG>来实现，所以说这里已经很明显了，我们可以打开<STRONG><FONT color=#ff0000>passiveobject</FONT></STRONG>这个文件夹，参考那里的列表来实现很多游戏里装备没有的属性，不止是移植，你可以添加所有passiveobject列表里的效果，比如说施放技能时会有剑舞的剑气，甚至直接出现觉醒都可以实现。<BR>当然了，出错几率还是蛮高的。。。所以不能乱改<BR></P>
+<P>总结两点，方法上面可以参考各种其他装备的写法，而<STRONG><FONT color=#ff0000>各种特效的代码参考passiveobject</FONT></STRONG>。<BR>另外，这里提醒下，<STRONG><FONT color=#ff0000>出错是常有的事，有时候我们需要备份</FONT></STRONG>，这是个好习惯。。</P>
+<P>另外说下我自己的代码寻找方法，GM工具里自带的国服代码列表，台服代码列表，还有script文件夹里自带的各种lst,string文件，一般来说，靠这几样足够了。。。。</P>
+<P>杂项修改<BR>避免一些活动道具的消失，有些道具是活动道具，所以重新登录游戏就消失了，对于这些道具，可以把<BR>[expiration 
+date]<BR>1294930800<BR>这段代码的数值改为0就可以<BR></P>
+<P>最后，说下感想吧，其实这篇帖子里的东西并不难，关键是你肯不肯花时间去研究罢了。其实我们都没有必要去研究这种东西，这不过是自娱自乐罢了。所以说，懂得多也没什么了不起，什么都不懂也没什么好惭愧的。关键是有些人不要自己不肯花时间还对别人各种要求。这只是游戏，我们根本没必要在这花太多时间，所以有些人不肯研究这些完全可以理解，但是既然你选择了不研究那就不要老是想着修改了，不要一边想着修改，一边又想着各种伸手。<BR>对我来说，修改的乐趣是在于自己可以DIY，正是因为由自己动手，由自己研究，才感到乐趣。当然其他人可以不这么想，毕竟每个人都是不同的。<BR>接下来的日子，我也要忙起来了，所以也没时间研究这些东西了。你们的问题我可能解答不来，也可能没时间解答，只能说尽量吧，毕竟每个人都有自己要忙的事，而不是停留在游戏</P>
+<P>因为部分修改没有截图，所以可能有些人修改时会碰到一些问题，碰到问题时首先多思考，好好思考下我说的话，我提供的主要是一种思路，一种思维方式，先想想你要实现哪些功能，这些功能可能涉及到哪些文件，文件之间又有哪些联系，根据现有的线索展开合理的联想，并学会参考其他文件的写法。出错的时候看下是不是文件之间的对应关系，有没有少了什么，或者多了什么。<BR>为了方便大家快速找到问题，我上传了一些修改完的文件，你要是出错了可以对照着我修改的文件看看<BR><A 
+href="http://pan.baidu.com/s/1pJ7pLlLtimegaterequiem">http://pan.baidu.com/s/1pJ7pLlLtimegaterequiem</A>，</P>
 <P>&nbsp;</P>
-<P>���ͼǰ����Ǹ���ͼ����BUG����Ȼ���Խ�ͼ���������µ�¼�Ῠ��ɫ����ûʱ���о���Щ�ˣ����Բ��ᡣ����վ�����˽�ͼû���⣬Ҳû����ɫ��������ֻ�����˽�ͼ������֤û�������⡣<BR>��֮���������ر���һ�£������޸ģ���ʱ���ݣ����ṩ���ļ�Ҳ�����ο�������֤���滻��û���⣬��ע�⣡</P></div>	
+<P>镇魂图前面的那个地图会有BUG，虽然可以进图，但是重新登录会卡角色，我没时间研究这些了，所以不提。发电站测试了进图没问题，也没卡角色，但是我只测试了进图，不保证没其他问题。<BR>总之我在这里特别提一下，谨慎修改，及时备份，我提供的文件也仅供参考，不保证你替换了没问题，多注意！</P></div>	
 	<div id="winchm_template_footer">Copyright &copy; 2014. All rights 
 reserved. (To change the copyright info, just edit it in template.)</div>
 </div>

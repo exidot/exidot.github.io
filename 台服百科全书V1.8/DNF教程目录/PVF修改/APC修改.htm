@@ -2,7 +2,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>APC�޸�</title>
+<title>APC修改</title>
 <meta name="GENERATOR" content="WinCHM">
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <style>
@@ -177,28 +177,28 @@ window.onafterprint = d_onafterprint;
 <body>
 
 <div id="winchm_template_top">
-	<div id="winchm_template_button"><A href="PVF�޸��ĵ�.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../template2/btn_prev_n.gif" border="0"></a><A href="��ͼ�޸�.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../template2/btn_next_n.gif" border="0"></a></div>
+	<div id="winchm_template_button"><A href="PVF修改心得.htm" title="Previous topic"><img id="winchm_template_prev" alt="Previous topic" src="../../template2/btn_prev_n.gif" border="0"></a><A href="地图修改.htm" title="Next topic"><img id="winchm_template_next" alt="Next topic" src="../../template2/btn_next_n.gif" border="0"></a></div>
 	<div id="winchm_template_navigation"><a href="index.html">Help</a> &gt; 
-<A href="PVF�޸�.htm">PVF�޸�</A> &gt; <A href="PVF�޸��ĵ�.htm">PVF�޸��ĵ�</A> &gt; </div>
-	<div id="winchm_template_title">APC�޸�</div>
+<A href="PVF修改.htm">PVF修改</A> &gt; <A href="PVF修改心得.htm">PVF修改心得</A> &gt; </div>
+	<div id="winchm_template_title">APC修改</div>
 </div>
 <div id="winchm_template_container">
 	<div id="winchm_template_content">
-<P>������˵����ż���޸ķ�����֮ǰҲ����һƪ����ˡ�<BR>���������޸ĳ������ż����pvf�������δ�</P>
+<P>首先来说下人偶，修改方法我之前也在另一篇提过了。<BR>比如我想修改出西岚人偶，用pvf工具依次打开</P>
 <P><FONT color=#ff0000><STRONG>stackable - professional - puppet - fighter 
-commonrad.stk</STRONG></FONT>��</P>
-<P>Ȼ������µ�<STRONG><FONT color=#ff0000>summon apc</FONT></STRONG>��ĵ�һ����ֵ�滻Ϊ<FONT color=#ff0000><STRONG>1511</STRONG></FONT>����������������ֵΪ�ȼ�������Ըĳ�90</P>
-<P><IMG alt="" src="../../images/APC�޸�01.jpg"></P>
-<P>�޸�</P>
-<P>Ȼ���������������޸ķ���������summon 
-apc����˼Ϊ�ٻ�apc����ô����Ҫ�����޸��ٻ�����ż����Ȼ�������ż����Ϳ����ˡ�������漰�����ȡ����ż�Ĵ��룬��Ϊ����Ҫ�޸ĵ���APC������������Ȼ���뵽��aicharacter��Ȼ���֮�����Ǿͻῴ��aicharacter.LST���������APC�Ĵ����б������ǿ����������ҵ�������Ҫ�޸ĳ�������ż����</P>
-<P>�������ᵽ�˺�׺��ΪLST���ļ�����ʵ�����ļ������б�����˼���ܶ��ļ����ﶼ������б��ļ�������equipment.lst��skill.lst�ȵȡ��ܶ��˾���˵�Ҳ�����Ӧ�Ĵ��밡����ʵ�ο����LST�ļ��Ϳ�����</P>
-<P>���ڣ����ǿ����ٻ�������������Ҫ����ż�ˡ�Ȼ�����ǻᷢ����ЩAPC��Ȼ���зŸ���ͣ��Ȼ����û��ʲô���ã��˺����ˡ����ԣ��Ҿ��뵽�޸���ЩAPC�������ˣ���Ȼ���Ǵ�aicharacter����ļ����ҵ�����Ҫ�޸ĵ�APC����ĳGSDΪ������aic�ļ����޸�attack 
-damage rate�µ���ֵ�Ϳ��ԡ���ſ��԰ɣ���ʵ����APC���˺��Ҳ�û����ô��ע�������޸ĳ����������</P>
-<P><IMG alt="" src="../../images/APC�޸�02.jpg"></P>
-<P>�������ǿ��Կ����������ݣ���ֹ���˺����ʣ����м��ܣ�����ȼ������������װ���ȵȣ�����Ȥ�Ŀ����Լ��ĸ�</P>
-<P>��ż���泶�˺ܶ��ˣ����볶�ˡ����о����ٻ�����ģ��޷Ǿ��ǰ�summon apc������summon 
-monster���ѣ����ڹ�����룬��֮ǰ�Ѿ�˵���ˣ���LST�ļ�</P>
+commonrad.stk</STRONG></FONT>，</P>
+<P>然后将最底下的<STRONG><FONT color=#ff0000>summon apc</FONT></STRONG>里的第一个数值替换为<FONT color=#ff0000><STRONG>1511</STRONG></FONT>，至于下面两个数值为等级，你可以改成90</P>
+<P><IMG alt="" src="../../images/APC修改01.jpg"></P>
+<P>修改</P>
+<P>然后，我们来分析这修改方法，首先summon 
+apc的意思为召唤apc，那么我们要是想修改召唤的人偶，当然改这个人偶代码就可以了。这里就涉及到如何取到人偶的代码，因为我们要修改的是APC，所以我们自然会想到打开aicharacter，然后打开之后我们就会看到aicharacter.LST，这个就是APC的代码列表，我们可以在这里找到我们想要修改出来的人偶代码</P>
+<P>上面我提到了后缀名为LST的文件，事实上这文件就是列表的意思，很多文件夹里都有这个列表文件，例如equipment.lst，skill.lst等等。很多人经常说找不到对应的代码啊，其实参考这个LST文件就可以了</P>
+<P>现在，我们可以召唤出各种我们想要的人偶了。然后，我们会发现这些APC虽然大招放个不停，然而并没有什么卵用，伤害感人。所以，我就想到修改这些APC的数据了，当然还是打开aicharacter这个文件，找到你想要修改的APC，以某GSD为例，打开aic文件，修改attack 
+damage rate下的数值就可以。大概可以吧，其实关于APC的伤害我并没有怎么关注，就是修改出来玩玩而已</P>
+<P><IMG alt="" src="../../images/APC修改02.jpg"></P>
+<P>这里我们可以看到各种数据，不止是伤害比率，还有技能，人物等级，人物佩戴的装备等等，有兴趣的可以自己改改</P>
+<P>人偶方面扯了很多了，不想扯了。还有就是召唤怪物的，无非就是把summon apc换成了summon 
+monster而已，至于怪物代码，我之前已经说过了，看LST文件</P>
 <P> 
  <BR>&nbsp;</P></div>	
 	<div id="winchm_template_footer">Copyright &copy; 2014. All rights 
